@@ -1,3 +1,7 @@
+// Import and inject Vercel Web Analytics
+import { inject } from '@vercel/analytics';
+inject();
+
 document.documentElement.classList.add("js-enabled");
 
 /* ═══════════ SCROLL REVEAL ═══════════ */
