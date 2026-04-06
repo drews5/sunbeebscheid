@@ -886,36 +886,38 @@ h1, h2, h3 {
     .vote-layout {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1rem;
         align-items: center;
-        padding-top: 1rem;
-    }
-    .vote-graphics {
-        order: 1;
-        transform: scale(0.8);
-        margin-bottom: -1rem;
+        padding-top: 0.5rem;
     }
     .vote-column-right {
-        order: 2;
+        order: 1;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .vote-info {
-        margin-bottom: 1rem;
-    }
-    .vote-info h4 {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-    }
-    .vote-info p {
-        font-size: 0.9rem;
-    }
     .vote-form-container {
         width: 100%;
-        padding: 1.8rem 1.2rem;
+        padding: 1.5rem 1rem;
         border-radius: 12px;
+        margin-bottom: 2rem;
+    }
+    .vote-info {
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    .vote-graphics {
+        order: 2;
+        transform: scale(0.7);
+        margin-top: -1rem;
+        opacity: 0.8;
+    }
+    .vote-headline h2 {
+        font-size: 2.5rem;
+    }
+    .vote-image {
+        max-width: 220px;
     }
     
     .footer-primary {
