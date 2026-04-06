@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunbeeb &amp; Scheid | For Students</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Supabase Core Dependency Globally Executed -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="page-shell">
+        <!-- ═══════ HEADER ═══════ -->
+        <header class="site-header" id="main-header">
+            <div class="section-inner header-inner">
+                <a href="index.html" class="brand-mark">
+                    <img src="assets/logo-light.png" alt="Sunbeeb & Scheid Logo" class="header-logo" id="header-logo">
+                    <span class="header-subtitle">FOR CARLSON STUDENT BODY PRESIDENTS</span>
+                </a>
+                <nav class="site-nav">
+                    <a href="index.html#home">HOME</a>
+                    <a href="platform.html">PLATFORM</a>
+                    <a href="index.html#about">TEAM</a>
+                    <a href="index.html#vote" class="nav-cta">VOTE</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <!-- ═══════ HERO ═══════ -->
+            <section class="hero color-section" id="home" data-theme="dark" data-color="#84b8d7">
+                <div class="section-inner hero-layout">
+                    <div class="hero-content">
+                        <h1 class="reveal">Himeeka and Drew<br>are running on<br>
+                            <span class="highlight-gold">real connections</span>,<br>
+                            <span class="highlight-gold">career success</span>, and<br>
+                            <span class="highlight-gold">belonging</span> at Carlson.
+                        </h1>
+                        <div class="hero-actions reveal" style="transition-delay: 0.15s;">
+                            <a href="#about" class="button button-white button-lg">LEARN MORE</a>
+                            <a href="#vote" class="button button-gold button-lg">VOTE HERE</a>
+                        </div>
+                        <div class="hero-arrow reveal" style="transition-delay: 0.3s;">
+                            <svg viewBox="0 0 100 40" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 35 Q 40 5 95 10" />
+                                <path d="M75 0 L 100 10 L 75 25" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="hero-image-wrap reveal" style="transition-delay: 0.2s;">
+                        <img src="assets/sshero.png" alt="Himeeka and Drew" class="hero-image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════ RED BANNER ═══════ -->
+            <section class="countdown-banner color-section" data-theme="dark" data-color="#a22136">
+                <div class="section-inner banner-content reveal">
+                    <p id="countdown-banner-txt"><span id="countdown-days">14 days</span> until voting opens on <span class="highlight-gold">April 20</span>.</p>
+                    <a href="index.html#vote" class="button button-outline-gold">VOTE</a>
+                </div>
+            </section>
+
+            <!-- ═══════ ABOUT ═══════ -->
+            <section class="about-section color-section" id="about" data-theme="light" data-color="#ffffff">
+                <div class="section-inner about-layout">
+                    <div class="about-content">
+                        <h2 class="reveal">We envision a Carlson that <span class="sketch-underline-gold">uplifts</span> all students.</h2>
+                        
+                        <div class="about-text">
+                            <p class="reveal" style="transition-delay: 0.1s;">As President and Vice President of the Carlson undergraduate student body, we envision a Carlson that uplifts all students. This campaign is for everyone who believes in the strength of community and a student government that actually works for the people it serves.</p>
+                            
+                            <p class="reveal" style="transition-delay: 0.2s;">We are advocating for real connections, career success, and a true sense of belonging in each corner of this school. We've seen what it looks like when students are overlooked, and we know what becomes possible when they are not. As your Presidential Team, we will work hard every single day to make that happen for all of you.</p>
+                            
+                            <p class="reveal" style="transition-delay: 0.3s;">By representing Carlson students, we are here to listen carefully, act decisively, and deliver.</p>
+                            
+                            <p class="reveal signature-text" style="transition-delay: 0.4s;">Sunbeeb &amp; Scheid for Students.</p>
+                        </div>
+                        
+                        <div class="about-actions reveal" style="transition-delay: 0.4s;">
+                            <a href="index.html#vote" class="button button-gold">VOTE HERE</a>
+                            <a href="platform.html" class="button button-blue">FULL PLATFORM</a>
+                        </div>
+                    </div>
+                    <div class="about-image-wrap reveal" style="transition-delay: 0.2s;">
+                        <img src="assets/ssabout.png" alt="Himeeka and Drew walking" class="about-image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════ TEAM SECTION ═══════ -->
+            <section class="team-section color-section" id="team" data-theme="light" data-color="#ffffff">
+                <div class="section-inner">
+                    <h2 class="team-heading reveal">Meet the Candidates</h2>
+                    
+                    <div class="team-grid">
+                        <!-- Himeeka -->
+                        <div class="profile-card reveal">
+                            <img src="assets/himeeka.jpg" alt="Himeeka Sunbeeb" class="profile-photo">
+                            <div class="profile-details">
+                                <h3>Himeeka Sunbeeb</h3>
+                                <span class="profile-role">President</span>
+                                <p class="profile-intro">Running to bring real equity and advocacy into every decision Carlson makes for its students.</p>
+                                <ul class="profile-involvements">
+                                    <li>VP of Diversity, Equity &amp; Inclusion — Carlson Business Board</li>
+                                    <li>Director of External Relations — Women of Color in Business Association</li>
+                                    <li>Co-Director of Conference — CoMIS</li>
+                                    <li>YWI Program Assistant — Women's Foundation of Minnesota</li>
+                                    <li>Operations Intern — Office of Governor Tim Walz</li>
+                                    <li>Commercial Banking Intern — Wells Fargo</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Drew -->
+                        <div class="profile-card reveal" style="transition-delay: 0.15s;">
+                            <img src="assets/drew.jpg" alt="Drew Scheid" class="profile-photo">
+                            <div class="profile-details">
+                                <h3>Drew Scheid</h3>
+                                <span class="profile-role">Vice President</span>
+                                <p class="profile-intro">Running to connect technology, community, and the arts into a student government that actually delivers.</p>
+                                <ul class="profile-involvements">
+                                    <li>Junior Representative — Carlson Business Board (former VP of DEI)</li>
+                                    <li>Co-Chair — CoMIS International Case Competition</li>
+                                    <li>VP &amp; Co-Founder — Business of Entertainment, Arts &amp; Music</li>
+                                    <li>President — Vocal U A Cappella</li>
+                                    <li>Technology &amp; Innovation Committee — Undergraduate Student Government</li>
+                                    <li>IT Security Intern — Polaris (upcoming)</li>
+                                    <li>IT Infrastructure Intern — Zurn Elkay</li>
+                                    <li>IT Business Intern — Bank Five Nine</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════ VOTE SECTION ═══════ -->
+            <section class="vote-section color-section" id="vote" data-theme="gold" data-color="#ffcd33">
+                <div class="section-inner vote-layout">
+                    <div class="vote-graphics reveal">
+                        <div class="vote-headline">
+                            <h2>VOTE</h2>
+                            <svg class="scribble-underline" viewBox="0 0 200 20" preserveAspectRatio="none">
+                                <path d="M5,10 Q 50,5 100,12 T 195,8 M15,15 Q 90,18 185,12" stroke="#a22136" stroke-width="6" fill="none" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <img src="assets/ssvote.png" alt="Himeeka and Drew pointing up" class="vote-image">
+                    </div>
+                    
+                    <div class="vote-column-right">
+                        <div class="vote-info reveal">
+                            <h4>Voting: April 20 &ndash; April 24</h4>
+                            <p>All undergraduate Carlson students are eligible. If you sign up below, we'll send you an official reminder and direct link to the UMN voting portal.</p>
+                        </div>
+                        
+                        <div class="vote-form-container reveal" style="transition-delay: 0.2s;">
+                            <form class="progressive-form" id="join-form">
+                                <div class="form-header" id="form-header">
+                                    <h3>Sign up to vote.</h3>
+                                    <p class="form-subtitle">Sunbeeb &amp; Scheid For Students</p>
+                                </div>
+                            
+                            <div class="form-steps-container">
+                                <!-- First Step: Name -->
+                                <div class="form-step active" id="step-name">
+                                    <label for="name">What's your name?</label>
+                                    <div class="input-wrapper">
+                                        <input type="text" id="name" name="name" required placeholder="First & Last Name">
+                                        <button type="button" class="next-btn" id="btn-next-step" disabled aria-label="Next step">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M5 12h14"></path>
+                                                <path d="M12 5l7 7-7 7"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Second Step: Student ID -->
+                                <div class="form-step" id="step-id">
+                                    <label for="studentid">Student ID Number</label>
+                                    <div class="input-wrapper">
+                                        <input type="text" id="studentid" name="studentid" required placeholder="e.g. smith500">
+                                        <button type="submit" class="next-btn submit-btn" id="btn-submit" disabled aria-label="Submit">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M5 12h14"></path>
+                                                <path d="M12 5l7 7-7 7"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Success Step -->
+                                <div class="form-step form-success" id="step-success">
+                                    <div class="success-icon-wrap">
+                                        <svg viewBox="0 0 24 24" class="success-icon" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M20 6L9 17l-5-5"></path>
+                                        </svg>
+                                    </div>
+                                    <h4>You're signed up to vote!</h4>
+                                    <p>You will be sent a link to the official UMN vote page on April 20th.</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <!-- ═══════ FOOTER ═══════ -->
+        <footer class="site-footer color-section" id="footer" data-theme="light" data-color="#ffffff">
+            <div class="section-inner footer-layout">
+                <div class="footer-primary">
+                    <img src="assets/logo-square.png" alt="Sunbeeb & Scheid Footer Logo" class="footer-logo">
+                    <nav class="footer-nav">
+                        <a href="index.html#home">Home</a>
+                        <a href="platform.html">Platform</a>
+                        <a href="index.html#about">Team</a>
+                        <a href="index.html#vote">Vote</a>
+                    </nav>
+                </div>
+                <div class="footer-secondary">
+                    <p>&copy; 2026 Sunbeeb &amp; Scheid For Students.</p>
+                    <p class="signature">Designed for the students.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
