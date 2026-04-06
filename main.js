@@ -58,7 +58,7 @@ if (header && colorSections.length > 0) {
             header.style.backgroundColor = color;
 
             if (theme !== currentTheme) {
-                header.classList.remove('theme-light', 'theme-dark');
+                header.classList.remove('theme-light', 'theme-dark', 'theme-gold');
                 header.classList.add(`theme-${theme}`);
                 
                 if (theme === 'light') {
