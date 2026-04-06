@@ -12,10 +12,19 @@ try {
 }
 
 const triggerHaptic = (type = "light") => {
-    if (haptics) {
-        haptics.trigger(type);
-    } else if (navigator.vibrate) {
-        // Fallback for direct vibration
+    // Official WebHaptics Library
+    if (window.WebHaptics) {
+        if (!haptics) {
+            try { haptics = window.WebHaptics.useWebHaptics(); } catch(e){}
+        }
+        if (haptics && haptics.trigger) {
+            haptics.trigger(type);
+            return;
+        }
+    }
+    
+    // Low-level Vibrate API Fallback (Standard Browser)
+    if (navigator.vibrate) {
         if (type === "success") navigator.vibrate([15, 30, 20]);
         else if (type === "error") navigator.vibrate([30, 40, 30, 40, 30]);
         else navigator.vibrate(12);
