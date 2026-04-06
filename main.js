@@ -58,15 +58,20 @@ if (header && colorSections.length > 0) {
             header.style.backgroundColor = color;
 
             if (theme !== currentTheme) {
+                // Haptic feedback tick on scroll boundary threshold cross!
+                if (currentTheme !== '') {
+                    if (typeof triggerHaptic === "function") triggerHaptic("light");
+                }
+                
                 header.classList.remove('theme-light', 'theme-dark', 'theme-gold');
                 header.classList.add(`theme-${theme}`);
                 
                 if (theme === 'light') {
-                    headerLogo.src = 'assets/logo-dark.png';
+                    headerLogo.src = document.getElementById('preload-logo-dark').src;
                 } else if (theme === 'gold') {
-                    headerLogo.src = 'assets/logo-gold.png';
+                    headerLogo.src = document.getElementById('preload-logo-gold').src;
                 } else {
-                    headerLogo.src = 'assets/logo-light.png';
+                    headerLogo.src = document.getElementById('preload-logo-light').src;
                 }
                 
                 currentTheme = theme;
