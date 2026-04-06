@@ -100,7 +100,7 @@ if (header && colorSections.length > 0) {
             if (theme !== currentTheme) {
                 // Haptic feedback tick on scroll boundary threshold cross!
                 if (currentTheme !== '') {
-                    if (typeof triggerHaptic === "function") triggerHaptic("light");
+                    triggerHaptic("light");
                 }
                 
                 header.classList.remove('theme-light', 'theme-dark', 'theme-gold');
