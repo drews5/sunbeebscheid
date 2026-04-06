@@ -811,8 +811,19 @@ h1, h2, h3 {
 
 @media (max-width: 900px) {
     .site-nav { display: none; }
-    .site-header { padding: 1rem 0; }
-    .header-subtitle { display: none; }
+    .site-header { padding: 0.8rem 0; }
+    .header-logo { height: 28px; }
+    .header-subtitle { 
+        display: block; 
+        font-size: 0.55rem;
+        border-left: 1px solid rgba(0,0,0,0.2);
+        padding-left: 1rem;
+        line-height: 1.2;
+        max-width: 140px;
+    }
+    .site-header.theme-dark .header-subtitle { border-left-color: rgba(255,255,255,0.3); }
+
+    .hero-arrow { display: none !important; }
     
     .section-inner { width: min(100% - 2rem, 1100px); }
     
@@ -873,27 +884,38 @@ h1, h2, h3 {
     }
 
     .vote-layout {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+        padding-top: 1rem;
     }
     .vote-graphics {
+        order: 1;
+        transform: scale(0.8);
+        margin-bottom: -1rem;
+    }
+    .vote-column-right {
+        order: 2;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        gap: 1rem;
-    }
-    .vote-headline h2 {
-        font-size: 3.5rem;
-    }
-    .vote-image {
-        max-width: 260px;
-        margin: 0 auto;
     }
     .vote-info {
-        text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+    }
+    .vote-info h4 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .vote-info p {
+        font-size: 0.9rem;
     }
     .vote-form-container {
-        padding: 2rem 1.5rem;
-        margin-top: 0;
+        width: 100%;
+        padding: 1.8rem 1.2rem;
+        border-radius: 12px;
     }
     
     .footer-primary {
