@@ -1,5 +1,23 @@
 document.documentElement.classList.add("js-enabled");
 
+/* ═══════════ GLOBAL WEB HAPTICS ═══════════ */
+// Synthesizing web-haptics interactions for Vanilla JS
+const triggerHaptic = (type = "light") => {
+    if (!navigator.vibrate) return;
+    if (type === "success") navigator.vibrate([15, 30, 20]); // double tap feeling
+    else if (type === "error") navigator.vibrate([30, 40, 30, 40, 30]); // long shake
+    else navigator.vibrate(10); // standard light tap
+};
+
+// Bind to every interaction
+document.addEventListener("pointerdown", (e) => {
+    const target = e.target.closest('a, button, input[type="submit"], .next-btn');
+    if (target) {
+        triggerHaptic("light");
+    }
+});
+
+
 /* ═══════════ SCROLL REVEAL ═══════════ */
 const revealItems = document.querySelectorAll(".reveal");
 if (revealItems.length > 0) {
@@ -110,22 +128,7 @@ document.querySelectorAll('a[href*="#"]').forEach((anchor) => {
     });
 });
 
-/* ═══════════ GLOBAL WEB HAPTICS ═══════════ */
-// Synthesizing web-haptics interactions for Vanilla JS
-const triggerHaptic = (type = "light") => {
-    if (!navigator.vibrate) return;
-    if (type === "success") navigator.vibrate([15, 30, 20]); // double tap feeling
-    else if (type === "error") navigator.vibrate([30, 40, 30, 40, 30]); // long shake
-    else navigator.vibrate(10); // standard light tap
-};
 
-// Bind to every interaction
-document.addEventListener("pointerdown", (e) => {
-    const target = e.target.closest('a, button, input[type="submit"], .next-btn');
-    if (target) {
-        triggerHaptic("light");
-    }
-});
 
 /* ═══════════ PROGRESSIVE VOTE FORM ═══════════ */
 const joinForm = document.getElementById("join-form");
