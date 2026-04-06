@@ -1,12 +1,25 @@
 document.documentElement.classList.add("js-enabled");
 
 /* ═══════════ GLOBAL WEB HAPTICS ═══════════ */
-// Synthesizing web-haptics interactions for Vanilla JS
+// Using official web-haptics library for high-fidelity mobile feedback
+let haptics;
+try {
+    if (window.WebHaptics) {
+        haptics = window.WebHaptics.useWebHaptics();
+    }
+} catch (e) {
+    console.warn("Haptics init failed", e);
+}
+
 const triggerHaptic = (type = "light") => {
-    if (!navigator.vibrate) return;
-    if (type === "success") navigator.vibrate([15, 30, 20]); // double tap feeling
-    else if (type === "error") navigator.vibrate([30, 40, 30, 40, 30]); // long shake
-    else navigator.vibrate(10); // standard light tap
+    if (haptics) {
+        haptics.trigger(type);
+    } else if (navigator.vibrate) {
+        // Fallback for direct vibration
+        if (type === "success") navigator.vibrate([15, 30, 20]);
+        else if (type === "error") navigator.vibrate([30, 40, 30, 40, 30]);
+        else navigator.vibrate(12);
+    }
 };
 
 // Bind to every interaction
