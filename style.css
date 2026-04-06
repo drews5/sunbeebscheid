@@ -829,7 +829,20 @@ h1, h2, h3 {
         gap: 1rem;
     }
     .hero-actions .button { width: 100%; }
-    .hero-image-wrap { margin-top: 2rem; }
+    .hero-image-wrap { 
+        margin-top: 1rem; 
+        order: 2;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 500px;
+        margin-inline: auto;
+    }
+    .hero-image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
     
     .banner-content {
         flex-direction: column;
