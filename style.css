@@ -811,6 +811,8 @@ h1, h2, h3 {
 
 @media (max-width: 900px) {
     .site-nav { display: none; }
+    .site-header { padding: 1rem 0; }
+    .header-subtitle { display: none; }
     
     .section-inner { width: min(100% - 2rem, 1100px); }
     
@@ -872,13 +874,26 @@ h1, h2, h3 {
 
     .vote-layout {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2rem;
     }
     .vote-graphics {
         align-items: center;
+        gap: 1rem;
+    }
+    .vote-headline h2 {
+        font-size: 3.5rem;
+    }
+    .vote-image {
+        max-width: 260px;
+        margin: 0 auto;
+    }
+    .vote-info {
+        text-align: center;
+        margin-bottom: 2rem;
     }
     .vote-form-container {
         padding: 2rem 1.5rem;
+        margin-top: 0;
     }
     
     .footer-primary {
