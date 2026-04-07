@@ -162,6 +162,35 @@ h1, h2, h3 {
     gap: 2rem;
 }
 
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 100;
+}
+.mobile-menu-btn span {
+    width: 30px;
+    height: 3px;
+    background: var(--text-dark);
+    border-radius: 10px;
+    transition: all 0.3s;
+    position: relative;
+    transform-origin: 1px;
+}
+.site-header.theme-dark .mobile-menu-btn span {
+    background: var(--white);
+}
+
+.mobile-menu-btn.is-active span:nth-child(1) { transform: rotate(45deg); }
+.mobile-menu-btn.is-active span:nth-child(2) { opacity: 0; }
+.mobile-menu-btn.is-active span:nth-child(3) { transform: rotate(-45deg); }
+
 .site-nav a {
     font-family: var(--font-heading);
     font-size: 0.95rem;
@@ -810,18 +839,55 @@ h1, h2, h3 {
 }
 
 @media (max-width: 900px) {
-    .site-nav { display: none; }
+    .header-inner {
+        position: relative;
+        justify-content: center;
+    }
+    .brand-mark {
+        flex-direction: column;
+        gap: 0.3rem;
+        align-items: center;
+    }
+    .mobile-menu-btn {
+        display: flex;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .site-nav {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background: var(--white);
+        box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+        padding-top: 6rem;
+        transition: right 0.3s ease;
+        z-index: 90;
+        align-items: center;
+        gap: 2rem;
+    }
+    .site-nav.is-open {
+        right: 0;
+    }
+    .site-nav a {
+        color: var(--text-dark);
+    }
+    
     .site-header { padding: 0.8rem 0; }
     .header-logo { height: 28px; }
     .header-subtitle { 
         display: block; 
-        font-size: 0.55rem;
-        border-left: 1px solid rgba(0,0,0,0.2);
-        padding-left: 1rem;
-        line-height: 1.2;
-        max-width: 140px;
+        font-size: 0.45rem;
+        border-left: none;
+        padding-left: 0;
+        text-align: center;
+        max-width: none;
     }
-    .site-header.theme-dark .header-subtitle { border-left-color: rgba(255,255,255,0.3); }
+    .site-header.theme-dark .header-subtitle { border-left-color: transparent; }
 
     .hero-arrow { display: none !important; }
     

@@ -40,6 +40,26 @@ document.addEventListener("pointerdown", (e) => {
 });
 
 
+/* ═══════════ MOBILE MENU ═══════════ */
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const siteNav = document.getElementById('site-nav');
+
+if (mobileMenuBtn && siteNav) {
+    mobileMenuBtn.addEventListener('click', () => {
+        siteNav.classList.toggle('is-open');
+        mobileMenuBtn.classList.toggle('is-active');
+        triggerHaptic("light");
+    });
+
+    const navLinks = siteNav.querySelectorAll('a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            siteNav.classList.remove('is-open');
+            mobileMenuBtn.classList.remove('is-active');
+        });
+    });
+}
+
 /* ═══════════ SCROLL REVEAL ═══════════ */
 const revealItems = document.querySelectorAll(".reveal");
 if (revealItems.length > 0) {

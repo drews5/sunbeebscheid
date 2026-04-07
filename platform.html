@@ -10,10 +10,24 @@
     <script src="https://cdn.jsdelivr.net/npm/web-haptics@0.0.6/dist/index.global.js"></script>
     <style>
         .platform-hero {
+            position: relative;
             background-color: var(--sky);
-            padding: 12rem 0 6rem;
+            background-image: url('assets/OJ5A7452.jpg');
+            background-size: cover;
+            background-position: center 25%;
+            padding: 14rem 0 8rem;
             color: var(--white);
             text-align: center;
+        }
+        .platform-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .platform-hero .section-inner {
+            position: relative;
+            z-index: 2;
         }
         .platform-hero h1 {
             color: var(--white);
@@ -27,22 +41,29 @@
         }
         
         .platform-details {
-            background-color: var(--white);
+            background-color: #f7f9fc;
             padding: 6rem 0;
         }
         
-        .platform-block {
+        .cards-container {
             display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 4rem;
-            margin-bottom: 6rem;
-            align-items: start;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
         }
-        
-        .platform-block:last-child {
-            margin-bottom: 0;
+
+        .platform-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease;
+            height: 100%;
         }
-        
+        .platform-card:hover {
+            transform: translateY(-5px);
+        }
+
         .block-title {
             position: sticky;
             top: 120px;
@@ -98,14 +119,19 @@
             font-family: var(--font-heading);
         }
 
+        .initiatives-section {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
         @media (max-width: 900px) {
-            .platform-block {
+            .cards-container {
                 grid-template-columns: 1fr;
-                gap: 2rem;
             }
-            .block-title {
-                position: relative;
-                top: 0;
+            .initiatives-section {
+                padding: 1.5rem;
             }
         }
     </style>
@@ -117,9 +143,12 @@
             <div class="section-inner header-inner">
                 <a href="index.html" class="brand-mark">
                     <img src="assets/logo-light.png" alt="Sunbeeb & Scheid Logo" class="header-logo" id="header-logo">
-                    <span class="header-subtitle">CARLSON STUDENT BODY PRESIDENTIAL TEAM</span>
+                    <span class="header-subtitle">SUNBEEB&amp;SCHEID FOR STUDENTS | CARLSON STUDENT BODY PRESIDENTIAL TEAM</span>
                 </a>
-                <nav class="site-nav">
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <nav class="site-nav" id="site-nav">
                     <a href="index.html#home">HOME</a>
                     <a href="platform.html">PLATFORM</a>
                     <a href="index.html#about">TEAM</a>
@@ -130,77 +159,83 @@
 
         <main>
             <!-- Hero -->
-            <section class="platform-hero color-section" data-theme="dark" data-color="#84b8d7">
+            <section class="platform-hero color-section" data-theme="dark" data-color="#2a3b45">
                 <div class="section-inner">
                     <h1 class="reveal">Our Vision For Carlson</h1>
-                    <p class="reveal" style="transition-delay: 0.1s;">A student government that listens early, acts fast, and stays close to the people it serves. We are relentless about follow-through.</p>
+                    <p class="reveal" style="transition-delay: 0.1s;">Building a stronger community and student government that actually works for the people it serves.</p>
                 </div>
             </section>
 
             <!-- Detailed Content -->
-            <section class="platform-details color-section" data-theme="light" data-color="#ffffff">
+            <section class="platform-details color-section" data-theme="light" data-color="#f7f9fc">
                 <div class="section-inner">
                     
-                    <div class="platform-block reveal">
-                        <div class="block-title">
-                            <div class="icon-wrap">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    <div class="cards-container">
+                        <!-- REAL CONNECTIONS -->
+                        <div class="platform-card reveal">
+                            <div class="block-title" style="margin-bottom:1.5rem;">
+                                <div class="icon-wrap">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                </div>
+                                <h2>Real <br>Connections</h2>
                             </div>
-                            <h2>Real <br>Connections</h2>
+                            <div class="block-content">
+                                <p>Real connections extends beyond networking. We want events that feel purposeful, policies that encourage connection, and constant feedback that actually leads to change.</p>
+                                <ul>
+                                    <li>Open up more ways to get honest feedback, and deliver it to school leaders.</li>
+                                    <li>Support student groups and campus partners that create community.</li>
+                                    <li>Keep the door open so students always know exactly what's going on.</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="block-content">
-                            <p>Real relationships over forced networking. We want leadership that stays close to the people it represents, making sure feedback actually leads to change.</p>
-                            <ul>
-                                <li>Open up more ways to get honest feedback, instead of just checking a box.</li>
-                                <li>Back student groups and campus partnerships that create genuine community.</li>
-                                <li>Keep the door open so students always know exactly where to bring a concern.</li>
-                            </ul>
+
+                        <!-- CAREER SUCCESS -->
+                        <div class="platform-card reveal" style="transition-delay: 0.1s;">
+                            <div class="block-title" style="margin-bottom:1.5rem;">
+                                <div class="icon-wrap">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                                </div>
+                                <h2>Career <br>Success</h2>
+                            </div>
+                            <div class="block-content">
+                                <p>We're pushing for better career pathways starting the second you join the Carlson school. Professional development here should feel inclusive and tailored to your goals.</p>
+                                <ul>
+                                    <li>Push for more resources devoted to student internships and carlson talent.</li>
+                                    <li>Bring internships, panels, and recruiting tools into one central hub that's easy to use.</li>
+                                    <li>Focus on programming that opens doors and leads to long careers.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- BELONGING -->
+                        <div class="platform-card reveal" style="transition-delay: 0.2s;">
+                            <div class="block-title" style="margin-bottom:1.5rem;">
+                                <div class="icon-wrap">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                                </div>
+                                <h2>Belonging <br>at Carlson</h2>
+                            </div>
+                            <div class="block-content">
+                                <p>Every student should feel at home here. We're building a culture where more people can see themselves in campus life without having to pretend.</p>
+                                <ul>
+                                    <li>Make sure different identities and backgrounds are recognized and supported.</li>
+                                    <li>Back the leaders already doing the ground-level work of welcoming people in.</li>
+                                    <li>Advocate for communication and traditions that feel human and inclusive.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="platform-block reveal">
-                        <div class="block-title">
-                            <div class="icon-wrap">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                            </div>
-                            <h2>Career <br>Success</h2>
-                        </div>
-                        <div class="block-content">
-                            <p>We're pushing for better connections with Minneapolis employers and resources that students actually need. Professional development shouldn't feel scattered or anonymous.</p>
-                            <ul>
-                                <li>Push for tighter partnerships with companies looking for Carlson talent.</li>
-                                <li>Bring internships, panels, and recruiting tools into one central hub that's easy to use.</li>
-                                <li>Focus on programming that opens doors, rather than just offering passive advice.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="platform-block reveal">
-                        <div class="block-title">
-                            <div class="icon-wrap">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                            </div>
-                            <h2>Belonging <br>at Carlson</h2>
-                        </div>
-                        <div class="block-content">
-                            <p>Every student should feel at home here. We're building a culture where more people can see themselves in campus life without having to pretend.</p>
-                            <ul>
-                                <li>Make sure different identities and backgrounds are recognized and supported.</li>
-                                <li>Back the leaders already doing the ground-level work of welcoming people in.</li>
-                                <li>Advocate for communication and traditions that feel human and inclusive.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="platform-block reveal">
-                        <div class="block-title">
-                            <div class="icon-wrap">
+                    <!-- INITIATIVES -->
+                    <div class="initiatives-section reveal">
+                        <div class="block-title" style="margin-bottom:2rem; text-align:center;">
+                            <div class="icon-wrap" style="margin: 0 auto 1.5rem auto;">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                             </div>
                             <h2>Actionable <br>Initiatives</h2>
                         </div>
-                        <div class="block-content">
-                            <p>Concrete steps to improve the day-to-day student experience. We aren't just here to talk—we're here to deliver specific results for the undergraduate body.</p>
+                        <div class="block-content" style="max-width: 800px; margin: 0 auto;">
+                            <p style="text-align:center; margin-bottom: 2rem;">Concrete steps to improve the day-to-day student experience. We aren't just here to talk—we're here to deliver specific results for the undergraduate body.</p>
                             <ul>
                                 <li><strong>Improve Business Board:</strong> Refactor board and team composition to include a dedicated Marketing Delegate to better represent all majors.</li>
                                 <li><strong>Maroon Lobby:</strong> Expand lobby hours and add more community games to make it a true student hub.</li>
