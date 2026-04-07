@@ -510,12 +510,12 @@ h1, h2, h3 {
    ═══════════════════════════════════════════════════ */
 .vote-section {
     background-color: var(--gold);
-    padding: 6rem 0 0 0;
+    padding: 8rem 0; /* Balanced vertical padding */
 }
 
 .vote-headline-wrapper {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     display: flex;
     justify-content: center;
 }
@@ -528,7 +528,7 @@ h1, h2, h3 {
 
 .vote-column-form {
     width: 100%;
-    max-width: 600px;
+    max-width: 500px; /* More standard form width */
 }
 
 .vote-info {
@@ -573,13 +573,15 @@ h1, h2, h3 {
 .vote-image-footer {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 5rem; /* More breathing room */
 }
 
 .vote-image {
-    max-width: 500px;
+    max-width: 600px; /* Slightly larger image for balance */
     width: 100%;
     height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
 }
 
 .vote-headline {
@@ -588,9 +590,9 @@ h1, h2, h3 {
 }
 
 .vote-headline h2 {
-    font-size: clamp(5rem, 12vw, 12rem);
+    font-size: clamp(4rem, 10vw, 7rem); /* More standard 'big' size */
     margin: 0;
-    line-height: 0.9;
+    line-height: 1;
     letter-spacing: 0.02em;
     color: var(--text-dark);
 }

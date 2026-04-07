@@ -283,20 +283,50 @@ if (joinForm) {
 /* ═══════════ CONTACT FORM HANDLER ═══════════ */
 const contactForm = document.getElementById("contact-form");
 const contactSuccess = document.getElementById("contact-success");
+const contactNameInput = document.getElementById("contact-name");
+const contactEmailInput = document.getElementById("contact-email");
+const contactMessageInput = document.getElementById("contact-message");
 
 if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
+    contactForm.addEventListener("submit", async (e) => {
         e.preventDefault();
         
-        // In a real production app, this would POST to a backend or service like Formspree/Netlify
-        // For now, we provide immediate visual & haptic feedback as requested for premium feel.
-        
+        const name = contactNameInput.value.trim();
+        const email = contactEmailInput.value.trim();
+        const message = contactMessageInput.value.trim();
+
+        if (!name || !email || !message) return;
+
         const btn = contactForm.querySelector('button[type="submit"]');
         if (btn) {
             btn.disabled = true;
             btn.innerText = "SENDING...";
         }
 
+        // Supabase DB Backend Hook
+        if (dbClient) {
+            console.log("Attempting contact submission...", { name, email, message });
+            try {
+                const { error } = await dbClient.from('contacts').insert([{ 
+                    name: name, 
+                    email: email, 
+                    message: message 
+                }]);
+                if (error) {
+                    console.error("Contact insert failed:", error);
+                    alert("Submission failed: " + error.message);
+                    if (btn) {
+                        btn.disabled = false;
+                        btn.innerText = "SEND MESSAGE";
+                    }
+                    return;
+                }
+            } catch (err) {
+                console.error("Supabase connection error:", err);
+            }
+        }
+
+        // Success Visuals
         setTimeout(() => {
             contactForm.reset();
             if (btn) {
@@ -306,7 +336,7 @@ if (contactForm) {
                 contactSuccess.style.display = 'block';
                 triggerHaptic("success");
             }
-        }, 800);
+        }, 500);
     });
 }
 
