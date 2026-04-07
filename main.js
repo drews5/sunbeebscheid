@@ -1,3 +1,6 @@
+import { createClient } from '@supabase/supabase-js';
+import { useWebHaptics } from 'web-haptics';
+
 document.documentElement.classList.add("js-enabled");
 
 /**
@@ -15,23 +18,20 @@ document.documentElement.classList.add("js-enabled");
 // Using official web-haptics library for high-fidelity mobile feedback
 let haptics;
 try {
-    if (window.WebHaptics) {
-        haptics = window.WebHaptics.useWebHaptics();
-    }
+    haptics = useWebHaptics();
 } catch (e) {
     console.warn("Haptics init failed", e);
 }
 
 const triggerHaptic = (type = "light") => {
-    // Official WebHaptics Library
-    if (window.WebHaptics) {
-        if (!haptics) {
-            try { haptics = window.WebHaptics.useWebHaptics(); } catch(e){}
-        }
-        if (haptics && haptics.trigger) {
-            haptics.trigger(type);
-            return;
-        }
+    // Try to init if not already
+    if (!haptics) {
+        try { haptics = useWebHaptics(); } catch(e){}
+    }
+    
+    if (haptics && haptics.trigger) {
+        haptics.trigger(type);
+        return;
     }
     
     // Low-level Vibrate API Fallback (Standard Browser)
@@ -264,8 +264,8 @@ if (joinForm) {
                     throw new Error("Supabase credentials not set");
                 }
 
-                // Initialize safely
-                const supabase = window.supabase.createClient(_supabaseUrl, _supabaseKey);
+                // Initialize safely using official NPM package
+                const supabase = createClient(_supabaseUrl, _supabaseKey);
                 
                 const { error } = await supabase.from('voters').insert([{ name: name, student_id: studentid }]);
                 
