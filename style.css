@@ -187,6 +187,10 @@ h1, h2, h3 {
     background: var(--white);
 }
 
+.mobile-menu-btn.is-active span {
+    background: var(--text-dark) !important;
+}
+
 .mobile-menu-btn.is-active span:nth-child(1) { transform: rotate(45deg); }
 .mobile-menu-btn.is-active span:nth-child(2) { opacity: 0; }
 .mobile-menu-btn.is-active span:nth-child(3) { transform: rotate(-45deg); }
