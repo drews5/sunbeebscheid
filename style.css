@@ -1048,7 +1048,7 @@ h1, h2, h3 {
    CONTACT SECTION
    ═══════════════════════════════════════════════════ */
 .contact-section {
-    background-color: #2a3b45; /* Dark base color */
+    background-color: var(--sky); /* Matching Hero Blue */
     padding: 6rem 0;
 }
 
