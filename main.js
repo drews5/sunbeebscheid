@@ -1,4 +1,8 @@
 import { createClient } from '@supabase/supabase-js';
+import { inject } from '@vercel/analytics';
+
+// Initialize Vercel Analytics
+inject();
 
 document.documentElement.classList.add("js-enabled");
 
