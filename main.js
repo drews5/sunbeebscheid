@@ -267,9 +267,16 @@ if (joinForm) {
                 // Initialize safely
                 const supabase = window.supabase.createClient(_supabaseUrl, _supabaseKey);
                 
-                await supabase.from('voters').insert([{ name: name, student_id: studentid }]);
+                const { error } = await supabase.from('voters').insert([{ name: name, student_id: studentid }]);
+                
+                if (error) {
+                    console.error("Supabase error:", error);
+                    alert("Database error: " + error.message);
+                    return;
+                }
             } catch (err) {
-                console.error("Supabase ingestion failed:", err);
+                console.error("Supabase connection failed:", err);
+                alert("Connection failed. Check your console (F12) for details.");
             }
         } else {
             // Local fallback
