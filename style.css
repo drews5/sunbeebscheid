@@ -17,6 +17,19 @@
     --max-width: 1100px;
 }
 
+/* 
+   ═══════════════════════════════════════════════════
+   GLOBAL ACCESSIBILITY & THEMING
+   Ensures text contrast across different section themes.
+   ═══════════════════════════════════════════════════ 
+*/
+[data-theme="dark"] { color: var(--white); }
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, [data-theme="dark"] h4 { color: var(--white); }
+[data-theme="light"], [data-theme="gold"] { color: var(--text-dark); }
+[data-theme="light"] h1, [data-theme="light"] h2, [data-theme="light"] h3, [data-theme="light"] h4,
+[data-theme="gold"] h1, [data-theme="gold"] h2, [data-theme="gold"] h3, [data-theme="gold"] h4 { color: var(--text-dark); }
+
+
 @font-face { font-family: 'Neutraface Text'; src: url('assets/fonts/Neutraface Text Light.otf') format('opentype'); font-weight: 300; font-style: normal; }
 @font-face { font-family: 'Neutraface Text'; src: url('assets/fonts/Neutraface Text Book.otf') format('opentype'); font-weight: 400; font-style: normal; }
 @font-face { font-family: 'Neutraface Text'; src: url('assets/fonts/Neutraface Text Demi.otf') format('opentype'); font-weight: 600; font-style: normal; }
@@ -560,23 +573,28 @@ h1, h2, h3 {
     line-height: 1.5;
 }
 
+/* 
+   Vote Form Container 
+   Simplified from "vibe-coded" heavy shadows to a cleaner, 
+   more professional look.
+*/
 .vote-form-container {
     background-color: var(--white);
-    border-radius: 24px;
-    padding: 3rem;
-    box-shadow: 0 15px 50px rgba(0,0,0,0.12), 0 0 0 10px rgba(255,255,255,0.3);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Natural elevation */
     margin-bottom: 5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease;
 }
 
 .vote-form-container:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.15), 0 0 0 10px rgba(255,255,255,0.4);
+    transform: translateY(-2px);
 }
 
 .progressive-form {
     position: relative;
-    min-height: 220px;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1024,5 +1042,98 @@ h1, h2, h3 {
         flex-direction: column;
         gap: 1.5rem;
         text-align: center;
+    }
+}
+/* ═══════════════════════════════════════════════════
+   CONTACT SECTION
+   ═══════════════════════════════════════════════════ */
+.contact-section {
+    background-color: #2a3b45; /* Dark base color */
+    padding: 6rem 0;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.contact-content h2 {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    margin-bottom: 1.5rem;
+}
+
+.contact-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-status {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.contact-status.success {
+    background: #2ecc71;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .form-row {
+        flex-direction: column;
     }
 }

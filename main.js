@@ -1,5 +1,16 @@
 document.documentElement.classList.add("js-enabled");
 
+/**
+ * SUNBEEB & SCHEID CAMPAIGN SITE
+ * Main logic for interactions, dynamic theming, and multi-step forms.
+ * 
+ * DESIGN NOTES:
+ * - High-fidelity haptics for mobile users.
+ * - Intersection Observer for reveal animations.
+ * - Dynamic theme switching based on section background color.
+ * - Multi-step progressive forms for high conversion.
+ */
+
 /* ═══════════ GLOBAL WEB HAPTICS ═══════════ */
 // Using official web-haptics library for high-fidelity mobile feedback
 let haptics;
@@ -269,6 +280,37 @@ if (joinForm) {
         stepSuccess.classList.add('active');
     });
 }
+
+/* ═══════════ CONTACT FORM HANDLER ═══════════ */
+const contactForm = document.getElementById("contact-form");
+const contactSuccess = document.getElementById("contact-success");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        
+        // In a real production app, this would POST to a backend or service like Formspree/Netlify
+        // For now, we provide immediate visual & haptic feedback as requested for premium feel.
+        
+        const btn = contactForm.querySelector('button[type="submit"]');
+        if (btn) {
+            btn.disabled = true;
+            btn.innerText = "SENDING...";
+        }
+
+        setTimeout(() => {
+            contactForm.reset();
+            if (btn) {
+                btn.style.display = 'none';
+            }
+            if (contactSuccess) {
+                contactSuccess.style.display = 'block';
+                triggerHaptic("success");
+            }
+        }, 800);
+    });
+}
+
 
 /* ═══════════ BANNER LIVE COUNTDOWN LOGIC ═══════════ */
 const cdElement = document.getElementById("countdown-days");
