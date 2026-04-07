@@ -440,9 +440,6 @@ h1, h2, h3 {
     transition: transform 0.4s ease;
 }
 
-.profile-card:hover .profile-photo {
-    transform: scale(1.05); /* Subtle hover for PNGs */
-}
 
 .involvements-heading {
     font-family: var(--font-heading);
