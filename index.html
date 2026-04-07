@@ -9,7 +9,7 @@
     
     <!-- Supabase & Haptics Dependency -->
 
-
+    <script src="https://cdn.jsdelivr.net/npm/web-haptics@0.0.6/dist/index.global.js"></script>
 </head>
 <body>
     <div class="page-shell">
@@ -144,21 +144,20 @@
 
             <!-- ═══════ VOTE SECTION ═══════ -->
             <section class="vote-section color-section" id="vote" data-theme="gold" data-color="#ffcd33">
-                <div class="section-inner vote-layout">
-                    <div class="vote-graphics reveal">
+                <div class="section-inner">
+                    <div class="vote-headline-wrapper reveal">
                         <div class="vote-headline">
                             <h2>VOTE</h2>
-                            <svg class="scribble-underline" viewBox="0 0 200 20" preserveAspectRatio="none">
-                                <path d="M5,10 Q 50,5 100,12 T 195,8 M15,15 Q 90,18 185,12" stroke="#a22136" stroke-width="6" fill="none" stroke-linecap="round"/>
+                            <svg class="scribble-underline" viewBox="0 0 400 30" preserveAspectRatio="none">
+                                <path d="M10,20 C 100,10 300,30 390,15" stroke="#a22136" stroke-width="8" fill="none" stroke-linecap="round"/>
+                                <path d="M40,25 C 150,15 250,25 360,20" stroke="#a22136" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
                             </svg>
                         </div>
-                        <img src="assets/ssvote.png" alt="Himeeka and Drew pointing up" class="vote-image">
                     </div>
                     
-
-                        
-                    <div class="vote-column-right">
-                        <div class="vote-form-container reveal" style="transition-delay: 0.2s;">
+                    <div class="vote-layout">
+                        <div class="vote-column-form">
+                            <div class="vote-form-container reveal" style="transition-delay: 0.2s;">
                             <form class="progressive-form" id="join-form">
                                 <div class="form-header" id="form-header">
                                     <h3>Sign up to vote!</h3>
@@ -208,9 +207,15 @@
                         </form>
                     </div>
 
-                    <div class="vote-info reveal">
-                        <h4>Voting: April 20 - April 24</h4>
-                        <p>All undergraduate Carlson students are eligible. If you sign up, we'll send you an official reminder and direct link to the UMN voting portal.</p>
+                            <div class="vote-info reveal">
+                                <h4>Voting: April 20 - April 24</h4>
+                                <p>All undergraduate Carlson students are eligible. If you sign up, we'll send you an official reminder and direct link to the UMN voting portal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="vote-image-footer reveal">
+                        <img src="assets/ssvote.png" alt="Himeeka and Drew pointing up" class="vote-image">
                     </div>
                 </div>
             </section>

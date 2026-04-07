@@ -3,344 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunbeeb &amp; Scheid for Students</title>
-    <meta
-        name="description"
-        content="A sunny, student-first campaign site for Sunbeeb &amp; Scheid focused on career success, genuine connection, and belonging at Carlson."
-    >
-    <meta name="theme-color" content="#88bada">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Caveat+Brush&family=Manrope:wght@400;500;700;800&display=swap"
-        rel="stylesheet"
-    >
-  <script type="module" crossorigin src="/assets/index-DjqzJbhc.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-Be3G830f.css">
+    <title>Sunbeeb &amp; Scheid | For Students</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon-B5gsg1vT.svg">
+    
+    <!-- Supabase & Haptics Dependency -->
+
+    <script src="https://cdn.jsdelivr.net/npm/web-haptics@0.0.6/dist/index.global.js"></script>
+  <script type="module" crossorigin src="/assets/main-CPd4ZtO0.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-D8PrKPkf.css">
 </head>
 <body>
     <div class="page-shell">
-        <header class="site-header">
-            <div class="site-header-inner">
-                <a href="#home" class="brand-mark" aria-label="Sunbeeb and Scheid home">
-                    <img src="/assets/logo-DOsgb4KH.png" alt="Sunbeeb and Scheid for Students logo">
+        <!-- ═══════ HEADER ═══════ -->
+        <header class="site-header theme-dark" id="main-header">
+            <div class="section-inner header-inner">
+                <a href="index.html" class="brand-mark">
+                    <img src="/assets/logo-light-DOsgb4KH.png" alt="Sunbeeb & Scheid Logo" class="header-logo" id="header-logo">
+                    <span class="header-subtitle">CARLSON STUDENT BODY PRESIDENTIAL TEAM</span>
                 </a>
-                <button
-                    class="menu-toggle"
-                    type="button"
-                    aria-expanded="false"
-                    aria-controls="site-nav"
-                    aria-label="Toggle navigation"
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
                 </button>
-                <nav class="site-nav" id="site-nav" aria-label="Primary">
-                    <a href="#home">Home</a>
-                    <a href="#platform">Platform</a>
-                    <a href="#about">About</a>
-                    <a href="#join" class="nav-join">Join</a>
+                <nav class="site-nav" id="site-nav">
+                    <a href="index.html#home">HOME</a>
+                    <a href="platform.html">PLATFORM</a>
+                    <a href="index.html#about">TEAM</a>
+                    <a href="index.html#vote" class="nav-cta">VOTE</a>
                 </nav>
             </div>
         </header>
 
         <main>
-            <section class="hero" id="home">
+            <!-- ═══════ HERO ═══════ -->
+            <section class="hero color-section" id="home" data-theme="dark" data-color="#84b8d7">
                 <div class="section-inner hero-layout">
-                    <div class="hero-copy reveal">
-                        <p class="eyebrow eyebrow-yellow">Carlson Student Government 2026</p>
-                        <h1>A Carlson that <span class="sketch-underline">uplifts</span> all students.</h1>
-                        <p class="hero-subhead">
-                            We are advocating for real connections, career success, and a true
-                            sense of belonging in each corner of this school.
-                        </p>
-                        <div class="hero-actions">
-                            <a href="#join" class="button button-primary">Join the Campaign</a>
-                            <a href="#platform" class="button button-secondary">Read the Platform</a>
+                    <div class="hero-content">
+                        <h1 class="reveal">Himeeka and Drew<br>are running on<br>
+                            <span class="highlight-gold">real connections</span>,<br>
+                            <span class="highlight-gold">career success</span>, and<br>
+                            <span class="highlight-gold">belonging</span> at Carlson.
+                        </h1>
+                        <div class="hero-actions reveal" style="transition-delay: 0.15s;">
+                            <a href="#about" class="button button-white button-lg">LEARN MORE</a>
+                            <a href="#vote" class="button button-gold button-lg">VOTE HERE</a>
                         </div>
-                        <p class="hero-kicker">Listen carefully. Act decisively. Deliver for students.</p>
-                    </div>
-
-                    <div class="hero-media reveal">
-                        <div class="hero-poster" id="hero-poster">
-                            <p class="poster-script">for students</p>
-                            <img
-                                src="/assets/logo-DOsgb4KH.png"
-                                alt="Sunbeeb and Scheid campaign graphic"
-                                class="hero-image"
-                                id="hero-visual"
-                            >
-                            <div class="poster-badges" aria-label="Campaign values">
-                                <span>Real connection</span>
-                                <span>Career success</span>
-                                <span>Belonging</span>
-                            </div>
+                        <div class="hero-arrow reveal" style="transition-delay: 0.3s;">
+                            <svg viewBox="0 0 100 40" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 35 Q 40 5 95 10" />
+                                <path d="M75 0 L 100 10 L 75 25" />
+                            </svg>
                         </div>
                     </div>
-
-                    <div class="hero-statement reveal">
-                        <p class="eyebrow">Our platform</p>
-                        <p>
-                            A student government should listen early, act fast, and stay close to
-                            the people it serves. We want a Carlson where students can find
-                            community without pretending, build careers with real support, and trust
-                            that their concerns will lead to action. That means stronger employer
-                            connections in Minneapolis and beyond, clearer visibility into
-                            opportunities, and more honest conversations about what students
-                            actually need. It means making student government easier to reach,
-                            easier to understand, and easier to hold accountable. We are not running
-                            to sound polished. We are running to be useful, human, and relentless
-                            about follow-through.
-                        </p>
+                    <div class="hero-image-wrap">
+                        <img src="/assets/sshero-DBAaXvUY.png" alt="Himeeka and Drew" class="hero-image">
                     </div>
                 </div>
             </section>
 
-            <section class="contrast-section">
-                <div class="section-inner contrast-layout">
-                    <article class="contrast-panel contrast-problem reveal">
-                        <p class="eyebrow eyebrow-light">When students are overlooked</p>
-                        <h2>Leadership starts to feel far away.</h2>
-                        <p>
-                            Feedback disappears. Opportunities stay scattered. Networking feels
-                            transactional. Students who should feel at home start to feel like they
-                            are figuring Carlson out alone.
-                        </p>
-                    </article>
-
-                    <div class="contrast-arrow reveal" aria-hidden="true">
-                        <span>let&apos;s change that</span>
-                    </div>
-
-                    <article class="contrast-panel contrast-solution reveal">
-                        <p class="eyebrow">What becomes possible</p>
-                        <h2>Students feel seen, backed, and connected.</h2>
-                        <p>
-                            When leadership listens and follows through, students find mentors, land
-                            real opportunities, build trust faster, and feel a stronger sense of
-                            belonging in every corner of Carlson.
-                        </p>
-                    </article>
+            <!-- ═══════ RED BANNER ═══════ -->
+            <section class="countdown-banner color-section" data-theme="dark" data-color="#a22136">
+                <div class="section-inner banner-content reveal">
+                    <p id="countdown-banner-txt"><span id="countdown-days">14 days</span> until voting opens on <span class="highlight-gold">April 20</span>.</p>
+                    <a href="index.html#vote" class="button button-outline-gold">VOTE</a>
                 </div>
             </section>
 
-            <section class="platform-section" id="platform">
+            <!-- ═══════ ABOUT ═══════ -->
+            <section class="about-section color-section" id="about" data-theme="light" data-color="#ffffff">
+                <div class="section-inner about-layout">
+                    <div class="about-content">
+                        <h2 class="reveal">We envision a Carlson that <span class="sketch-underline-gold">uplifts</span> all students.</h2>
+                        
+                        <div class="about-text">
+                            <p class="reveal" style="transition-delay: 0.1s;">As President and Vice President candidates, we'll build a Carlson that stays close to the people it represents. This campaign is for everyone who wants a student government that actually gets things done.</p>
+                            
+                            <p class="reveal" style="transition-delay: 0.2s;">We're focused on carving out spaces where students feel they belong and making sure no one gets overlooked. We'll be here every day to make it happen.</p>
+                            
+                            <p class="reveal" style="transition-delay: 0.3s;">We’re ready to listen, act, and deliver for every Carlson student.</p>
+                        </div>
+                        
+                        <div class="about-actions reveal" style="transition-delay: 0.4s;">
+                            <a href="index.html#vote" class="button button-gold">VOTE HERE</a>
+                            <a href="platform.html" class="button button-blue">FULL PLATFORM</a>
+                        </div>
+                    </div>
+                    <div class="about-image-wrap reveal" style="transition-delay: 0.2s;">
+                        <img src="/assets/ssabout-Dmdq0HYb.png" alt="Himeeka and Drew walking" class="about-image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════ TEAM SECTION ═══════ -->
+            <section class="team-section color-section" id="team" data-theme="light" data-color="#ffffff">
                 <div class="section-inner">
-                    <div class="section-head reveal">
-                        <p class="eyebrow">The pillars</p>
-                        <h2 class="section-title">A Student Government That Works For You</h2>
-                        <p class="section-copy">
-                            Student government should make your life better in ways you can actually
-                            feel: stronger opportunities, warmer connections, and a school culture
-                            where more people genuinely belong.
-                        </p>
-                    </div>
-
-                    <div class="pillar-grid">
-                        <article class="pillar-card reveal">
-                            <p class="pillar-number">01</p>
-                            <h3>Career Success</h3>
-                            <p>
-                                Actionable plans to connect students with employers and resources in
-                                Minneapolis and beyond.
-                            </p>
-                            <ul class="pillar-list">
-                                <li>Push for tighter relationships with employers who want Carlson talent.</li>
-                                <li>Make internships, treks, panels, and recruiting resources easier to find.</li>
-                                <li>Support programming that turns career prep into real access, not just advice.</li>
-                            </ul>
-                        </article>
-
-                        <article class="pillar-card reveal">
-                            <p class="pillar-number">02</p>
-                            <h3>Genuine Connection</h3>
-                            <p>
-                                Fostering real relationships and active listening over forced
-                                networking.
-                            </p>
-                            <ul class="pillar-list">
-                                <li>Create more spaces for honest feedback, not just performative outreach.</li>
-                                <li>Back student groups and cross-campus partnerships that build real friendships.</li>
-                                <li>Keep the door open so students always know where to bring an idea or concern.</li>
-                            </ul>
-                        </article>
-
-                        <article class="pillar-card reveal">
-                            <p class="pillar-number">03</p>
-                            <h3>Belonging</h3>
-                            <p>
-                                Ensuring every student feels at home and represented within the
-                                Carlson community.
-                            </p>
-                            <ul class="pillar-list">
-                                <li>Champion a culture where more students can see themselves in campus life.</li>
-                                <li>Support student leaders already doing the work of welcoming people in.</li>
-                                <li>Advocate for communication, events, and traditions that feel human and inclusive.</li>
-                            </ul>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <section class="about-section" id="about">
-                <div class="section-inner">
-                    <div class="section-head reveal">
-                        <p class="eyebrow">About us</p>
-                        <h2 class="section-title">Meet Your Presidential Team</h2>
-                        <p class="section-copy">
-                            This campaign is grounded in solidarity, active listening, and a simple
-                            promise: student government should work for students in ways that are
-                            visible, useful, and immediate.
-                        </p>
-                    </div>
-
+                    <h2 class="team-heading reveal">Meet the Team</h2>
+                    
                     <div class="team-grid">
-                        <article class="team-card team-card-dark reveal">
-                            <p class="eyebrow eyebrow-yellow">Sunbeeb</p>
-                            <h3>Presidential Candidate</h3>
-                            <p>
-                                Sunbeeb leads with warmth, urgency, and a clear belief that student
-                                government should solve real problems. The vision is a Carlson where
-                                leadership feels accessible, student voices shape decisions early,
-                                and every promise comes with follow-through students can actually
-                                see.
-                            </p>
-                            <p>
-                                This campaign style is simple: show up, listen closely, tell the
-                                truth, and keep moving until students feel the difference in daily
-                                campus life.
-                            </p>
-                            <div class="tag-list" aria-label="Sunbeeb strengths">
-                                <span>Accessible leadership</span>
-                                <span>Student-first vision</span>
-                                <span>Accountability</span>
+                        <!-- Himeeka -->
+                        <div class="profile-card reveal">
+                            <div class="profile-photo-container">
+                                <img src="/assets/himeeka-CX3gRjHB.png" alt="Himeeka Sunbeeb" class="profile-photo">
                             </div>
-                        </article>
-
-                        <article class="team-card reveal">
-                            <p class="eyebrow">Scheid</p>
-                            <h3>Vice Presidential Candidate</h3>
-                            <p>
-                                Scheid is an MIS and Business Analytics double major who knows that
-                                community does not happen by accident. As a Resident Advisor at
-                                Middlebrook Hall, Scheid has built belonging through direct
-                                day-to-day support, quick problem-solving, and real human
-                                connection.
-                            </p>
-                            <p>
-                                That same energy carries into serving as President of Vocal U, where
-                                Scheid has managed group activities, led with care, and kept teams
-                                moving together. The result is a leadership style that blends
-                                systems thinking with a strong instinct for making people feel at
-                                home.
-                            </p>
-                            <div class="tag-list" aria-label="Scheid background">
-                                <span>MIS + Business Analytics</span>
-                                <span>RA at Middlebrook Hall</span>
-                                <span>President of Vocal U</span>
+                            <div class="profile-details">
+                                <h3>Himeeka Sunbeeb</h3>
+                                <span class="profile-role">President</span>
+                                <h4 class="involvements-heading">Involvements</h4>
+                                <ul class="profile-involvements">
+                                    <li>VP of Diversity, Equity &amp; Inclusion - Carlson Business Board</li>
+                                    <li>Director of External Relations - Women of Color in Business Association</li>
+                                    <li>Co-Director of Conference - CoMIS</li>
+                                    <li>YWI Program Assistant - Women's Foundation of Minnesota</li>
+                                    <li>Operations Intern - Office of Governor Tim Walz</li>
+                                    <li>Commercial Banking Intern - Wells Fargo (upcoming)</li>
+                                </ul>
                             </div>
-                        </article>
-                    </div>
-
-                    <div class="promise-banner reveal">
-                        <p class="eyebrow eyebrow-yellow">The promise</p>
-                        <h2>
-                            By representing Carlson students, we are here to listen carefully, act
-                            decisively, and deliver.
-                        </h2>
+                        </div>
+                        
+                        <!-- Drew -->
+                        <div class="profile-card reveal" style="transition-delay: 0.15s;">
+                            <div class="profile-photo-container">
+                                <img src="/assets/drews-VlAXTVjd.png" alt="Drew Scheid" class="profile-photo">
+                            </div>
+                            <div class="profile-details">
+                                <h3>Drew Scheid</h3>
+                                <span class="profile-role">Vice President</span>
+                                <h4 class="involvements-heading">Involvements</h4>
+                                <ul class="profile-involvements">
+                                    <li>Junior Representative - Carlson Business Board (former VP of DEI)</li>
+                                    <li>Co-Chair - CoMIS International Case Competition</li>
+                                    <li>VP &amp; Co-Founder - Business of Entertainment, Arts &amp; Music</li>
+                                    <li>President - Vocal U A Cappella</li>
+                                    <li>Technology &amp; Innovation Committee - Undergraduate Student Government</li>
+                                    <li>IT Security Intern - Polaris (upcoming)</li>
+                                    <li>IT Infrastructure Intern - Zurn Elkay</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section class="join-section" id="join">
+            <!-- ═══════ VOTE SECTION ═══════ -->
+            <section class="vote-section color-section" id="vote" data-theme="gold" data-color="#ffcd33">
                 <div class="section-inner">
-                    <div class="section-head reveal">
-                        <p class="eyebrow">Join the campaign</p>
-                        <h2 class="section-title">Help Build The Carlson We Deserve</h2>
-                        <p class="section-copy">
-                            Sign up for updates, share what needs attention, and help shape a
-                            campaign rooted in direct student input.
-                        </p>
+                    <div class="vote-headline-wrapper reveal">
+                        <div class="vote-headline">
+                            <h2>VOTE</h2>
+                            <svg class="scribble-underline" viewBox="0 0 400 30" preserveAspectRatio="none">
+                                <path d="M10,20 C 100,10 300,30 390,15" stroke="#a22136" stroke-width="8" fill="none" stroke-linecap="round"/>
+                                <path d="M40,25 C 150,15 250,25 360,20" stroke="#a22136" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="vote-layout">
+                        <div class="vote-column-form">
+                            <div class="vote-form-container reveal" style="transition-delay: 0.2s;">
+                            <form class="progressive-form" id="join-form">
+                                <div class="form-header" id="form-header">
+                                    <h3>Sign up to vote!</h3>
+                                    <p class="form-subtitle">Sunbeeb &amp; Scheid For Students</p>
+                                </div>
+                            
+                            <div class="form-steps-container">
+                                <!-- First Step: Name -->
+                                <div class="form-step active" id="step-name">
+                                    <label for="name">What's your name?</label>
+                                    <div class="input-wrapper">
+                                        <input type="text" id="name" name="name" required placeholder="Name">
+                                        <button type="button" class="next-btn" id="btn-next-step" disabled aria-label="Next step">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M5 12h14"></path>
+                                                <path d="M12 5l7 7-7 7"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Second Step: Student ID -->
+                                <div class="form-step" id="step-id">
+                                    <label for="studentid">Student ID Number</label>
+                                    <div class="input-wrapper">
+                                        <input type="text" id="studentid" name="studentid" required placeholder="e.g. smith500">
+                                        <button type="submit" class="next-btn submit-btn" id="btn-submit" disabled aria-label="Submit">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M5 12h14"></path>
+                                                <path d="M12 5l7 7-7 7"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Success Step -->
+                                <div class="form-step form-success" id="step-success">
+                                    <div class="success-icon-wrap">
+                                        <svg viewBox="0 0 24 24" class="success-icon" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M20 6L9 17l-5-5"></path>
+                                        </svg>
+                                    </div>
+                                    <h4>You're signed up to vote!</h4>
+                                    <p>You will be sent a link to the official UMN vote page on April 20th.</p>
+                                </div>
+                            </div>
+                        </form>
                     </div>
 
-                    <div class="join-grid">
-                        <div class="join-side">
-                            <article class="join-card reveal">
-                                <h3>Why opt in?</h3>
-                                <ul class="join-list">
-                                    <li>Get campaign materials you actually asked to receive.</li>
-                                    <li>Share what needs to change at Carlson.</li>
-                                    <li>Help shape outreach, events, and turnout with real feedback.</li>
-                                </ul>
-                            </article>
-
-                            <article class="join-card join-card-muted reveal">
-                                <p class="eyebrow">Compliance note</p>
-                                <p>
-                                    Submitting this form grants written permission to receive
-                                    campaign materials from Sunbeeb &amp; Scheid. That helps the
-                                    campaign stay aligned with the rules against unsolicited mass
-                                    messaging.
-                                </p>
-                                <p>
-                                    This site is independently produced and does not use university
-                                    trademarks or sticker promotion.
-                                </p>
-                            </article>
+                            <div class="vote-info reveal">
+                                <h4>Voting: April 20 - April 24</h4>
+                                <p>All undergraduate Carlson students are eligible. If you sign up, we'll send you an official reminder and direct link to the UMN voting portal.</p>
+                            </div>
                         </div>
-
-                        <form class="join-form reveal" id="join-form" novalidate>
-                            <label class="field">
-                                <span>Full name</span>
-                                <input type="text" name="name" autocomplete="name" required>
-                            </label>
-
-                            <label class="field">
-                                <span>Email address</span>
-                                <input type="email" name="email" autocomplete="email" required>
-                            </label>
-
-                            <label class="field">
-                                <span>What do you want changed at Carlson?</span>
-                                <textarea
-                                    name="message"
-                                    rows="5"
-                                    placeholder="Tell us what you want student government to tackle."
-                                ></textarea>
-                            </label>
-
-                            <label class="checkbox-field">
-                                <input type="checkbox" name="consent" required>
-                                <span>
-                                    By submitting this form, I grant written permission to receive
-                                    campaign materials from Sunbeeb &amp; Scheid. I understand this
-                                    opt-in is voluntary and can be withdrawn later.
-                                </span>
-                            </label>
-
-                            <button type="submit" class="button button-primary button-full">
-                                Join the Campaign
-                            </button>
-                            <p class="form-status" id="form-status" aria-live="polite"></p>
-                        </form>
+                    </div>
+                    
+                    <div class="vote-image-footer reveal">
+                        <img src="/assets/ssvote-CR6DAAz8.png" alt="Himeeka and Drew pointing up" class="vote-image">
                     </div>
                 </div>
             </section>
         </main>
-
-        <footer class="site-footer">
-            <div class="site-footer-inner">
-                <div>
-                    <p class="footer-brand">Sunbeeb &amp; Scheid for Students</p>
-                    <p class="footer-copy">
-                        An independent student campaign focused on connection, career success, and
-                        belonging at Carlson.
-                    </p>
+        
+        <!-- ═══════ CONTACT ═══════ -->
+        <section class="contact-section color-section" id="contact" data-theme="dark" data-color="#84b8d7">
+            <div class="section-inner contact-layout">
+                <div class="contact-content">
+                    <h2 class="reveal">Get in Touch</h2>
+                    <p class="reveal">Want to share an idea, ask a question, or get involved with the campaign? We want to hear from you. Drop us a message below.</p>
                 </div>
-                <a href="#home" class="footer-link">Back to top</a>
+                
+                <form class="contact-form reveal" id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contact-name">Name</label>
+                            <input type="text" id="contact-name" name="name" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" name="email" placeholder="Email Address" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="button button-gold">SEND MESSAGE</button>
+                    <div id="contact-success" class="contact-status success" style="display:none;">Message sent! We'll get back to you soon.</div>
+                </form>
+            </div>
+        </section>
+
+        <!-- ═══════ FOOTER ═══════ -->
+        <footer class="site-footer color-section" id="footer" data-theme="light" data-color="#ffffff">
+            <div class="section-inner footer-layout">
+                <div class="footer-primary">
+                    <img src="/assets/logo-square-RJvGvh7D.png" alt="Sunbeeb & Scheid Footer Logo" class="footer-logo">
+                    <nav class="footer-nav">
+                        <a href="index.html#home">Home</a>
+                        <a href="platform.html">Platform</a>
+                        <a href="index.html#about">Team</a>
+                        <a href="index.html#vote">Vote</a>
+                    </nav>
+                </div>
+                <div class="footer-secondary">
+                    <p>&copy; 2026 Sunbeeb &amp; Scheid For Students.</p>
+                    <p class="disclaimer">This campaign independently follows all official election rules and procedures. This entity is independent from the University of Minnesota.</p>
+                </div>
             </div>
         </footer>
+    </div>
+    
+    <!-- Vite Preloading Asset Map for JS Execution Swap -->
+    <div style="display:none;" id="logo-preloads">
+        <img id="preload-logo-light" src="/assets/logo-light-DOsgb4KH.png" alt="Preload Light">
+        <img id="preload-logo-dark" src="/assets/logo-dark-CHRXmTZl.png" alt="Preload Dark">
+        <img id="preload-logo-gold" src="/assets/logo-gold-CA_-Rgkw.png" alt="Preload Gold">
     </div>
 
 </body>

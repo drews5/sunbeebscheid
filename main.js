@@ -1,36 +1,33 @@
 import { createClient } from '@supabase/supabase-js';
-import { useWebHaptics } from 'web-haptics';
 
 document.documentElement.classList.add("js-enabled");
 
-/**
- * SUNBEEB & SCHEID CAMPAIGN SITE
- * Main logic for interactions, dynamic theming, and multi-step forms.
- * 
- * DESIGN NOTES:
- * - High-fidelity haptics for mobile users.
- * - Intersection Observer for reveal animations.
- * - Dynamic theme switching based on section background color.
- * - Multi-step progressive forms for high conversion.
- */
+/* ═══════════ SUPABASE CLIENT ═══════════ */
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+let dbClient = null;
+if (supabaseUrl && supabaseUrl.includes('supabase.co')) {
+    dbClient = createClient(supabaseUrl, supabaseKey);
+}
 
 /* ═══════════ GLOBAL WEB HAPTICS ═══════════ */
-// Using official web-haptics library for high-fidelity mobile feedback
-let haptics;
+let hapticEngine = null;
 try {
-    haptics = useWebHaptics();
+    if (window.WebHaptics) {
+        hapticEngine = window.WebHaptics.useWebHaptics();
+    }
 } catch (e) {
     console.warn("Haptics init failed", e);
 }
 
 const triggerHaptic = (type = "light") => {
-    // Try to init if not already
-    if (!haptics) {
-        try { haptics = useWebHaptics(); } catch(e){}
+    if (!hapticEngine && window.WebHaptics) {
+        try { hapticEngine = window.WebHaptics.useWebHaptics(); } catch(e){}
     }
     
-    if (haptics && haptics.trigger) {
-        haptics.trigger(type);
+    if (hapticEngine && hapticEngine.trigger) {
+        hapticEngine.trigger(type);
         return;
     }
     
@@ -255,19 +252,9 @@ if (joinForm) {
         stepIdContainer.classList.add('past');
         
         // Supabase DB Backend Hook
-        if (window.supabase) {
+        if (dbClient) {
             try {
-                const _supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-                const _supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-                
-                if (!_supabaseUrl || _supabaseUrl.includes('YOUR_SUPABASE')) {
-                    throw new Error("Supabase credentials not set");
-                }
-
-                // Initialize safely using official NPM package
-                const supabase = createClient(_supabaseUrl, _supabaseKey);
-                
-                const { error } = await supabase.from('voters').insert([{ name: name, student_id: studentid }]);
+                const { error } = await dbClient.from('voters').insert([{ name: name, student_id: studentid }]);
                 
                 if (error) {
                     console.error("Supabase error:", error);
