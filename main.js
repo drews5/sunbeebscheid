@@ -357,8 +357,8 @@ if (cdElement && cdBannerTxt) {
         const diffTime = targetDate - now;
 
         if (diffTime <= 0) {
-            // Check if within the voting period (April 20-24)
-            const endDate = new Date(now.getFullYear(), 3, 25);
+            // Check if within the voting period (April 20-25)
+            const endDate = new Date(now.getFullYear(), 3, 26);
             if (now < endDate) {
                 cdBannerTxt.innerHTML = `Voting is <span class="highlight-gold">open right now</span>!`;
             } else {
