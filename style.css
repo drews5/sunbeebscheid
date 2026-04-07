@@ -421,11 +421,13 @@ h1, h2, h3 {
     object-fit: cover;
     object-position: center bottom;
     filter: brightness(1.05) contrast(1.05);
+    transform: scale(1.3);
+    transform-origin: center bottom;
     transition: transform 0.4s ease;
 }
 
 .profile-card:hover .profile-photo {
-    transform: scale(1.05);
+    transform: scale(1.35);
 }
 
 .involvements-heading {
@@ -541,17 +543,12 @@ h1, h2, h3 {
 .vote-info {
     text-align: center;
     margin-bottom: 2.5rem;
-    padding: 0 1rem;
 }
 
 .vote-info h4 {
     color: var(--red);
-    font-size: 1.4rem;
-    margin-bottom: 0.8rem;
-    background-color: var(--white);
-    display: inline-block;
-    padding: 0.4rem 1.2rem;
-    border-radius: 999px;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .vote-info p {
