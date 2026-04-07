@@ -10,34 +10,45 @@
 
     <style>
         .platform-hero {
-            position: relative;
-            background-color: var(--sky);
-            background-image: url('assets/OJ5A7452.jpg');
-            background-size: cover;
-            background-position: center 25%;
-            padding: 14rem 0 8rem;
+            background-color: #84b8d7; /* Theme blue */
+            padding: 12rem 0 6rem;
             color: var(--white);
-            text-align: center;
+            overflow: hidden;
         }
-        .platform-hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-color: rgba(0,0,0,0.5);
+        
+        .hero-split {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+            text-align: left;
         }
         .platform-hero .section-inner {
             position: relative;
             z-index: 2;
         }
+        .hero-image-wrap {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            aspect-ratio: 4/5;
+        }
+        .hero-image-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .platform-hero h1 {
             color: var(--white);
             font-size: clamp(3rem, 6vw, 4.5rem);
             margin-bottom: 1.5rem;
+            line-height: 1.1;
         }
         .platform-hero p {
             font-size: 1.25rem;
             max-width: 60ch;
-            margin: 0 auto;
         }
         
         .platform-details {
@@ -65,8 +76,7 @@
         }
 
         .block-title {
-            position: sticky;
-            top: 120px;
+            margin-bottom: 1.5rem;
         }
         
         .block-title h2 {
@@ -127,11 +137,18 @@
         }
 
         @media (max-width: 900px) {
+            .hero-split {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            .hero-image-wrap {
+                order: -1;
+                max-width: 300px;
+                margin: 0 auto;
+            }
             .cards-container {
                 grid-template-columns: 1fr;
-            }
-            .initiatives-section {
-                padding: 1.5rem;
             }
         }
     </style>
@@ -159,10 +176,17 @@
 
         <main>
             <!-- Hero -->
-            <section class="platform-hero color-section" data-theme="dark" data-color="#2a3b45">
+            <section class="platform-hero color-section" data-theme="dark" data-color="#84b8d7">
                 <div class="section-inner">
-                    <h1 class="reveal">Our Vision For Carlson</h1>
-                    <p class="reveal" style="transition-delay: 0.1s;">Building a stronger community and student government that actually works for the people it serves.</p>
+                    <div class="hero-split">
+                        <div class="hero-text">
+                            <h1 class="reveal">Our Vision For Carlson</h1>
+                            <p class="reveal" style="transition-delay: 0.1s;">Building a stronger community and student government that actually works for the people it serves.</p>
+                        </div>
+                        <div class="hero-image-wrap reveal" style="transition-delay: 0.2s;">
+                            <img src="assets/OJ5A7452.jpg" alt="Himeeka and Drew">
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -226,24 +250,6 @@
                         </div>
                     </div>
 
-                    <!-- INITIATIVES -->
-                    <div class="initiatives-section reveal">
-                        <div class="block-title" style="margin-bottom:2rem; text-align:center;">
-                            <div class="icon-wrap" style="margin: 0 auto 1.5rem auto;">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                            </div>
-                            <h2>Actionable <br>Initiatives</h2>
-                        </div>
-                        <div class="block-content" style="max-width: 800px; margin: 0 auto;">
-                            <p style="text-align:center; margin-bottom: 2rem;">Concrete steps to improve the day-to-day student experience. We aren't just here to talk—we're here to deliver specific results for the undergraduate body.</p>
-                            <ul>
-                                <li><strong>Improve Business Board:</strong> Refactor board and team composition to include a dedicated Marketing Delegate to better represent all majors.</li>
-                                <li><strong>Maroon Lobby:</strong> Expand lobby hours and add more community games to make it a true student hub.</li>
-                                <li><strong>Caribou Coffee Chats:</strong> Official expansion of the Caribou chat series to build closer bridges between students and leadership.</li>
-                                <li><strong>Direct Advocacy:</strong> Establish a direct line for student groups and clubs to lobby for resources and space.</li>
-                            </ul>
-                        </div>
-                    </div>
 
                 </div>
             </section>
