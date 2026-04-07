@@ -877,8 +877,8 @@ h1, h2, h3 {
     .site-nav.is-open {
         right: 0;
     }
-    .site-nav a {
-        color: var(--text-dark);
+    .site-nav a:not(.nav-cta) {
+        color: var(--text-dark) !important;
     }
     
     .site-header { padding: 0.8rem 0; }
