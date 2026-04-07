@@ -257,9 +257,14 @@ if (joinForm) {
         // Supabase DB Backend Hook
         if (window.supabase) {
             try {
-                const _supabaseUrl = 'YOUR_SUPABASE_URL';
-                const _supabaseKey = 'YOUR_SUPABASE_ANON_KEY';
-                // Initialize temporarily safely
+                const _supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+                const _supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+                
+                if (!_supabaseUrl || _supabaseUrl.includes('YOUR_SUPABASE')) {
+                    throw new Error("Supabase credentials not set");
+                }
+
+                // Initialize safely
                 const supabase = window.supabase.createClient(_supabaseUrl, _supabaseKey);
                 
                 await supabase.from('voters').insert([{ name: name, student_id: studentid }]);
