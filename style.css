@@ -30,10 +30,10 @@
 [data-theme="gold"] h1, [data-theme="gold"] h2, [data-theme="gold"] h3, [data-theme="gold"] h4 { color: var(--text-dark); }
 
 
-@font-face { font-family: 'Neutraface Text'; src: url('assets/fonts/Neutraface Text Light.otf') format('opentype'); font-weight: 300; font-style: normal; }
-@font-face { font-family: 'Neutraface Text'; src: url('assets/fonts/Neutraface Text Book.otf') format('opentype'); font-weight: 400; font-style: normal; }
-@font-face { font-family: 'Neutraface Text'; src: url('assets/fonts/Neutraface Text Demi.otf') format('opentype'); font-weight: 600; font-style: normal; }
-@font-face { font-family: 'Neutraface Text'; src: url('assets/fonts/Neutraface Text Bold.otf') format('opentype'); font-weight: 700; font-style: normal; }
+@font-face { font-family: 'Neutraface Text'; src: url('/assets/fonts/Neutraface Text Light.otf') format('opentype'); font-weight: 300; font-style: normal; }
+@font-face { font-family: 'Neutraface Text'; src: url('/assets/fonts/Neutraface Text Book.otf') format('opentype'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Neutraface Text'; src: url('/assets/fonts/Neutraface Text Demi.otf') format('opentype'); font-weight: 600; font-style: normal; }
+@font-face { font-family: 'Neutraface Text'; src: url('/assets/fonts/Neutraface Text Bold.otf') format('opentype'); font-weight: 700; font-style: normal; }
 
 /* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; }
