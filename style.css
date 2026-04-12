@@ -534,27 +534,32 @@ h1, h2, h3 {
     padding: 8rem 0 0 0; /* No bottom padding for flush image */
 }
 
-.vote-headline-wrapper {
+.vote-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "headline content"
+        "image content";
+    gap: 0 5rem;
+    align-items: start;
+}
+
+.vote-headline {
+    grid-area: headline;
     text-align: center;
-    margin-bottom: 4rem;
-    display: flex;
-    justify-content: center;
+    align-self: end;       /* Vertical alignment in desktop grid */
+    justify-self: center;  /* Shrink-wraps and horizontally centers on desktop */
+    padding-bottom: 2rem;
 }
 
-.vote-layout {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.vote-column-form {
+.vote-grid-content {
+    grid-area: content;
     width: 100%;
-    max-width: 500px; /* More standard form width */
 }
 
 .vote-info {
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-top: 2rem;
 }
 
 .vote-info h4 {
@@ -574,15 +579,13 @@ h1, h2, h3 {
 
 /* 
    Vote Form Container 
-   Simplified from "vibe-coded" heavy shadows to a cleaner, 
-   more professional look.
 */
 .vote-form-container {
     background-color: var(--white);
     border-radius: 16px;
     padding: 2.5rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Natural elevation */
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     border: 1px solid #f0f0f0;
     transition: transform 0.3s ease;
 }
@@ -591,19 +594,19 @@ h1, h2, h3 {
     transform: translateY(-2px);
 }
 
-.vote-image-footer {
+.vote-image-wrap {
+    grid-area: image;
+    align-self: end;
     display: flex;
     justify-content: center;
-    margin-top: 0;
+    width: 100%;
 }
 
 .vote-image {
-    max-width: 600px;
+    max-width: 500px;
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 0;
-    box-shadow: none;
 }
 
 .vote-headline {
@@ -621,7 +624,7 @@ h1, h2, h3 {
 
 .scribble-underline {
     position: absolute;
-    bottom: -10px;
+    bottom: -5px; /* Touches the letters directly */
     left: 0;
     width: 100%;
     height: 30px;
@@ -1019,56 +1022,34 @@ h1, h2, h3 {
         margin: 0 auto;
     }
 
-    .vote-layout {
+    .vote-grid {
         display: flex;
         flex-direction: column;
         gap: 3rem;
+        padding-bottom: 0;
         align-items: center;
-        padding-top: 1rem;
-        padding-bottom: 2rem;
     }
-    .vote-column-right {
-        order: 1;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
+    
+    .vote-headline {
+        padding-bottom: 0;
+        align-self: center; /* Override base grid align-self to center in flex column */
     }
-    .vote-form-container {
-        width: 100%;
-        padding: 2rem 1.5rem;
-        border-radius: 16px;
-        margin-bottom: 0;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1), 0 0 0 6px rgba(255,255,255,0.3);
-    }
-    .vote-info {
-        text-align: center;
-        margin-bottom: 0;
-    }
-    .vote-graphics {
-        order: 2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-        width: 100%;
-        opacity: 0.9;
-        margin-top: 0;
-        transform: none;
-    }
+    
     .vote-headline h2 {
-        font-size: 3.5rem;
-        margin-bottom: 0;
+        font-size: 4rem;
     }
-    .scribble-underline {
-        width: 160px;
-        margin: 0 auto;
+
+    .vote-image-wrap {
+        margin-top: -1rem; 
+        align-self: center; /* Override base grid align-self to center in flex column */
     }
+
     .vote-image {
-        max-width: 240px;
-        width: 80%;
-        height: auto;
+        max-width: 320px;
+    }
+
+    .vote-form-container {
+        padding: 2rem 1.5rem;
     }
     
     .footer-primary {
@@ -1200,5 +1181,189 @@ h1, h2, h3 {
     }
     .form-row {
         flex-direction: column;
+    }
+}
+
+/* ═══════════════════════════════════════════════════
+   ENDORSEMENTS SECTION
+   ═══════════════════════════════════════════════════ */
+.endorsements-section {
+    background-color: var(--red);
+    padding: 5rem 0 4.5rem;
+    text-align: center;
+}
+
+.endorsements-heading {
+    color: var(--gold);
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    margin-bottom: 4rem;
+    letter-spacing: 0.03em;
+}
+
+.endorsements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 4rem 2rem;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.endorsement-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    width: 200px;
+}
+
+.endorsement-card:hover {
+    transform: translateY(-8px) scale(1.05);
+}
+
+.endorsement-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: var(--white);
+    border: 6px solid var(--white);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.endorsement-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.endorsement-pill {
+    background-color: var(--gold);
+    color: var(--red); 
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    position: relative;
+    margin-top: -25px; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    min-width: 80%;
+    width: max-content;
+    max-width: 260px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+}
+
+/* ENDORSEMENT MODAL UI */
+.endorsement-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.endorsement-modal.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: var(--white);
+    width: 90%;
+    max-width: 550px; /* Slight extra width for longer quotes */
+    border-radius: 20px;
+    padding: 3rem 2.5rem 2.5rem;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    transform: translateY(30px) scale(0.95);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1001;
+}
+
+.endorsement-modal.is-active .modal-content {
+    transform: translateY(0) scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #999;
+    padding: 0;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.modal-close:hover {
+    color: var(--red);
+}
+
+.modal-logo-wrap {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: -70px auto 1.5rem;
+    background: var(--white);
+    border: 4px solid var(--white);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+}
+
+.modal-logo-wrap img {
+    width: 100%; height: 100%; object-fit: cover;
+}
+
+.modal-content h3 {
+    color: var(--red);
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.modal-content p {
+    color: var(--text-dark);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 650px) {
+    .endorsements-grid {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
     }
 }

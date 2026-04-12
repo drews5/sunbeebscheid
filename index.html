@@ -27,9 +27,7 @@
                     <a href="index.html#home">HOME</a>
                     <a href="platform.html">PLATFORM</a>
                     <a href="index.html#team">TEAM</a>
-                    <a href="https://instagram.com/votesunbeebscheid" target="_blank" class="nav-social-icon">
-                        <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                    </a>
+                    <a href="index.html#contact">CONTACT</a>
                     <a href="index.html#vote" class="nav-cta">VOTE</a>
                 </nav>
             </div>
@@ -144,124 +142,137 @@
                     </div>
                 </div>
             </section>
+            
+
             <!-- ═══════ VOTE SECTION ═══════ -->
             <section class="vote-section color-section" id="vote" data-theme="gold" data-color="#ffcd33">
                 <div class="section-inner">
-                    <div class="vote-headline-wrapper reveal">
-                        <div class="vote-headline">
+                    <div class="vote-grid">
+                        <!-- 1: Headline -->
+                        <div class="vote-headline reveal">
                             <h2>VOTE</h2>
                             <svg class="scribble-underline" viewBox="0 0 400 30" preserveAspectRatio="none">
                                 <path d="M10,20 C 100,10 300,30 390,15" stroke="#a22136" stroke-width="8" fill="none" stroke-linecap="round"/>
                                 <path d="M40,25 C 150,15 250,25 360,20" stroke="#a22136" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
                             </svg>
                         </div>
-                    </div>
-                    
-                    <div class="vote-layout">
-                        <div class="vote-column-form">
-                            <div class="vote-form-container reveal" style="transition-delay: 0.2s;">
-                            <form class="progressive-form" id="join-form">
-                                <div class="form-header" id="form-header">
-                                    <h3>Sign up to vote!</h3>
-                                    <p class="form-subtitle">Sunbeeb &amp; Scheid For Students</p>
-                                </div>
-                            
-                            <div class="form-steps-container">
-                                <!-- First Step: Name -->
-                                <div class="form-step active" id="step-name">
-                                    <label for="name">What's your name?</label>
-                                    <div class="input-wrapper">
-                                        <input type="text" id="name" name="name" required placeholder="Name">
-                                        <button type="button" class="next-btn" id="btn-next-step" disabled aria-label="Next step">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                                <path d="M5 12h14"></path>
-                                                <path d="M12 5l7 7-7 7"></path>
-                                            </svg>
-                                        </button>
+                        
+                        <!-- 2: Form & Info -->
+                        <div class="vote-grid-content">
+                            <div class="vote-form-container reveal" style="transition-delay: 0.1s;">
+                                <form class="progressive-form" id="join-form">
+                                    <div class="form-header" id="form-header">
+                                        <h3>Sign up to vote!</h3>
+                                        <p class="form-subtitle">Sunbeeb &amp; Scheid For Students</p>
                                     </div>
-                                </div>
                                 
-                                <!-- Second Step: Student ID -->
-                                <div class="form-step" id="step-id">
-                                    <label for="studentid">Student ID Number</label>
-                                    <div class="input-wrapper">
-                                        <input type="text" id="studentid" name="studentid" required placeholder="e.g. smith500">
-                                        <button type="submit" class="next-btn submit-btn" id="btn-submit" disabled aria-label="Submit">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                                <path d="M5 12h14"></path>
-                                                <path d="M12 5l7 7-7 7"></path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
+                                    <div class="form-steps-container">
+                                        <!-- First Step: Name -->
+                                        <div class="form-step active" id="step-name">
+                                            <label for="name">What's your name?</label>
+                                            <div class="input-wrapper">
+                                                <input type="text" id="name" name="name" required placeholder="Name">
+                                                <button type="button" class="next-btn" id="btn-next-step" disabled aria-label="Next step">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path d="M5 12h14"></path>
+                                                        <path d="M12 5l7 7-7 7"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Second Step: Student ID -->
+                                        <div class="form-step" id="step-id">
+                                            <label for="studentid">Student ID Number</label>
+                                            <div class="input-wrapper">
+                                                <input type="text" id="studentid" name="studentid" required placeholder="e.g. smith500">
+                                                <button type="submit" class="next-btn submit-btn" id="btn-submit" disabled aria-label="Submit">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path d="M5 12h14"></path>
+                                                        <path d="M12 5l7 7-7 7"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
 
-                                <!-- Success Step -->
-                                <div class="form-step form-success" id="step-success">
-                                    <div class="success-icon-wrap">
-                                        <svg viewBox="0 0 24 24" class="success-icon" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M20 6L9 17l-5-5"></path>
-                                        </svg>
+                                        <!-- Success Step -->
+                                        <div class="form-step form-success" id="step-success">
+                                            <div class="success-icon-wrap">
+                                                <svg viewBox="0 0 24 24" class="success-icon" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M20 6L9 17l-5-5"></path>
+                                                </svg>
+                                            </div>
+                                            <h4>You're signed up to vote!</h4>
+                                            <p>You will be sent a link to the official UMN vote page on April 20th.</p>
+                                        </div>
                                     </div>
-                                    <h4>You're signed up to vote!</h4>
-                                    <p>You will be sent a link to the official UMN vote page on April 20th.</p>
-                                </div>
+                                </form>
                             </div>
-                        </form>
-                    </div>
 
-                            <div class="vote-info reveal">
+                            <div class="vote-info reveal" style="transition-delay: 0.2s;">
                                 <h4>Voting: April 20 - April 25</h4>
                                 <p>All undergraduate Carlson students are eligible. If you sign up, we'll send you an official reminder and direct link to the UMN voting portal.</p>
                             </div>
                         </div>
+
+                        <!-- 3: Image -->
+                        <div class="vote-image-wrap reveal" style="transition-delay: 0.3s;">
+                            <img src="assets/ssvote.png" alt="Himeeka and Drew pointing up" class="vote-image">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════ ENDORSEMENTS SECTION ═══════ -->
+            <section class="endorsements-section color-section" id="endorsements" data-theme="dark" data-color="#a22136">
+                <div class="section-inner">
+                    <h2 class="endorsements-heading reveal">Endorsements</h2>
+                    <div class="endorsements-grid" id="endorsements-grid">
+                        <!-- Populated by main.js -->
+                    </div>
+                </div>
+            </section>
+            
+            <!-- ═══════ CONTACT ═══════ -->
+            <section class="contact-section color-section" id="contact" data-theme="dark" data-color="#84b8d7">
+                <div class="section-inner contact-layout">
+                    <div class="contact-content">
+                        <h2 class="reveal">Get in Touch</h2>
+                        <p class="reveal">Leave us a message and we’ll get back to you as soon as possible.</p>
+                        <div class="contact-links reveal">
+                            <a href="mailto:contact@sunbeebscheid.com" class="contact-link-item">
+                                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                contact@sunbeebscheid.com
+                            </a>
+                            <a href="https://instagram.com/votesunbeebscheid" target="_blank" class="contact-link-item">
+                                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                DM us @votesunbeebscheid
+                            </a>
+                        </div>
                     </div>
                     
-                    <div class="vote-image-footer reveal">
-                        <img src="assets/ssvote.png" alt="Himeeka and Drew pointing up" class="vote-image">
-                    </div>
+                    <form class="contact-form reveal" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Name</label>
+                                <input type="text" id="contact-name" name="name" placeholder="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email</label>
+                                <input type="email" id="contact-email" name="email" placeholder="Email Address" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="button button-gold">SEND MESSAGE</button>
+                        <div id="contact-success" class="contact-status success" style="display:none;">Message sent! We'll get back to you soon.</div>
+                    </form>
                 </div>
             </section>
         </main>
         
-        <!-- ═══════ CONTACT ═══════ -->
-        <section class="contact-section color-section" id="contact" data-theme="dark" data-color="#84b8d7">
-            <div class="section-inner contact-layout">
-                <div class="contact-content">
-                    <h2 class="reveal">Get in Touch</h2>
-                    <p class="reveal">Leave us a message and we’ll get back to you as soon as possible.</p>
-                    <div class="contact-links reveal">
-                        <a href="mailto:contact@sunbeebscheid.com" class="contact-link-item">
-                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            contact@sunbeebscheid.com
-                        </a>
-                        <a href="https://instagram.com/votesunbeebscheid" target="_blank" class="contact-link-item">
-                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                            instagram.com/votesunbeebscheid
-                        </a>
-                    </div>
-                </div>
-                
-                <form class="contact-form reveal" id="contact-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="contact-name">Name</label>
-                            <input type="text" id="contact-name" name="name" placeholder="Name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="contact-email">Email</label>
-                            <input type="email" id="contact-email" name="email" placeholder="Email Address" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="contact-message">Message</label>
-                        <textarea id="contact-message" name="message" rows="4" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="button button-gold">SEND MESSAGE</button>
-                    <div id="contact-success" class="contact-status success" style="display:none;">Message sent! We'll get back to you soon.</div>
-                </form>
-            </div>
-        </section>
-
         <!-- ═══════ FOOTER ═══════ -->
         <footer class="site-footer color-section" id="footer" data-theme="light" data-color="#ffffff">
             <div class="section-inner footer-layout">
@@ -280,6 +291,20 @@
                 </div>
             </div>
         </footer>
+
+        <!-- ═══════ ENDORSEMENT MODAL ═══════ -->
+        <div class="endorsement-modal" id="endorsement-modal">
+            <div class="modal-overlay" id="modal-overlay"></div>
+            <div class="modal-content">
+                <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+                <div class="modal-logo-wrap">
+                    <img id="modal-logo" src="" alt="Endorser Logo">
+                </div>
+                <h3 id="modal-org-name"></h3>
+                <p id="modal-statement"></p>
+            </div>
+        </div>
+
     </div>
     
     <!-- Vite Preloading Asset Map for JS Execution Swap -->
