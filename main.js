@@ -399,78 +399,78 @@ const endorsementsData = [
         org: "Women of Color in Business Association",
         shortOrg: "Women of Color in Business Association",
         statement: "As the Women of Color in Business Association, we are proud to support Himeeka and Drew for Carlson Student Body Leadership. Their values closely align with our mission of uplifting diverse voices and fostering an inclusive, empowering community. Over the years, we’ve seen their genuine commitment to the Carlson community and their dedication to creating meaningful change. We are confident they deeply care about this community and will work to ensure it continues to grow and be the best it can be!",
-        logoUrl: "/assets/wocba.png"
+        logoUrl: "/assets/endorsements/wocba.png"
     },
     {
         org: "Business of Entertainment, Arts and Music",
         shortOrg: "Business of Entertainment, Arts and Music",
         statement: "BEAM is proud to endorse Himeeka and Drew’s campaign for President and Vice President of the Carlson student body. We support their vision of a Carlson that uplifts all students and builds a stronger community within it. As a student organization, we look forward to seeing how Himeeka and Drew will improve upon supporting Carlson student organizations and their efforts to connect students with peers, business professionals, and career opportunities. Through their various backgrounds and lived experiences, we trust that they will use the knowledge they have learned and implement it to make meaningful change that will leave a positive impact on the Carlson community.",
-        logoUrl: "/assets/beam.png"
+        logoUrl: "/assets/endorsements/beam.png"
     },
     {
         org: "Muslim Business Administration",
         shortOrg: "Muslim Business Administration",
         statement: "We are proud to endorse Himeeka Sunbeeb and Drew Scheid for Carlson Student Body President. Their commitment to uplifting students, strengthening collaboration with student organizations, and building a more inclusive and connected Carlson community strongly aligns with our values at the Muslim Business Administration!",
-        logoUrl: "/assets/mba.png"
+        logoUrl: "/assets/endorsements/mba.png"
     },
     {
         org: "Global Business Nexus",
         shortOrg: "Global Business Nexus",
         statement: "We are proud to endorse Himeeka and Drew as President and Vice President! Their platform directly shares the values of Global Business Nexus. This shared vision ensures that as we navigate an interconnected world, every student will be provided with a community and resources needed to thrive both on campus and in their future careers.",
-        logoUrl: "/assets/gbn.jpg"
+        logoUrl: "/assets/endorsements/gbn.jpg"
     },
     {
         org: "Association of Latino Professionals for America",
         shortOrg: "Association of Latino Professionals for America",
         statement: "The Association of Latino Professionals for America is proud to endorse Himeeka and Drew for President and Vice President in recognition of their meaningful contributions to the Carlson community. Their strong commitment to uplifting diverse student voices and expanding access to opportunities closely reflects our mission of fostering inclusion and creating pathways of opportunity. We are confident in their continued ability to make a positive and lasting impact across Carlson.",
-        logoUrl: "/assets/alpfa.png"
+        logoUrl: "/assets/endorsements/alpfa.png"
+    },
+    {
+        org: "180 Degrees Consulting - UMN",
+        shortOrg: "180 Degrees",
+        statement: "We are excited to support Himeeka Sunbeeb and Drew Scheid for Carlson Student Body President and Vice President. Their focus on strengthening the relationships between student orgs and the Business Board strongly along with our goals of supporting if our members and increasing belonging in their student experience. This collaborative nature of their platform can allow us to grow our campus community and support our members in their professional and academic careers.",
+        logoUrl: "/assets/candidate-placeholder.png"
     },
     {
         org: "Undergraduate Business Law Society",
         shortOrg: "UBLS",
-        statement: "Undergraduate Business Law Society is proud to endorse Himeeka and Drew and their commitment to strengthening student organizations and building a more connected Carlson community.",
+        statement: "UBLS is proud to endorse Himeeka and Drew's campaign for President and Vice President due to their commitment to fostering an inclusive, collaborative, and engaged Carlson community. Their vision aligns with our values of leadership, professional development, and creating meaningful opportunities for students to grow both inside and outside the classroom. We are confident in their dedication to strengthening the student experience and supporting the Carlson community as a whole.",
         logoUrl: "/assets/candidate-placeholder.png"
     },
     {
         org: "Club MIS",
         shortOrg: "Club MIS",
-        statement: "Club MIS is proud to endorse Himeeka and Drew for Carlson Student Body leadership. Their platform reflects our values around student success, collaboration, and community.",
+        statement: "As a club that helps connect students to different local companies, we are glad this campaign is supporting career success!",
         logoUrl: "/assets/candidate-placeholder.png"
     },
     {
-        org: "Business Association of Multicultural Students",
-        shortOrg: "BAM",
-        statement: "Business Association of Multicultural Students is excited to endorse Himeeka and Drew because their vision for Carlson centers inclusion, community, and stronger support for student organizations.",
-        logoUrl: "/assets/candidate-placeholder.png"
-    },
-    {
-        org: "180 Degrees Consulting",
-        shortOrg: "180 Degrees Consulting",
-        statement: "180 Degrees Consulting is proud to support Himeeka and Drew and their commitment to meaningful student impact, collaboration, and community-building at Carlson.",
-        logoUrl: "/assets/candidate-placeholder.png"
-    },
-    {
-        org: "Asians in Management",
+        org: "Asians In Management",
         shortOrg: "AIM",
-        statement: "Asians in Management is happy to endorse Himeeka and Drew and appreciates their focus on supporting student organizations and creating a stronger Carlson community.",
+        statement: "Our Board likes your mission! and we support your journey!",
         logoUrl: "/assets/candidate-placeholder.png"
     },
     {
-        org: "Student Accounting and Finance Association",
+        org: "Student Accounting Finance Association (SAFA)",
         shortOrg: "SAFA",
-        statement: "Student Accounting and Finance Association is proud to endorse Himeeka and Drew. Their platform aligns with our commitment to transparency, student support, and a stronger Carlson community.",
+        statement: "We would like to endorse Himeeka and Drew because our club believes in their vision to uplift students and drive career advancement!",
         logoUrl: "/assets/candidate-placeholder.png"
     },
     {
         org: "Net Impact",
         shortOrg: "Net Impact",
-        statement: "Net Impact is proud to support Himeeka and Drew and their vision for a more inclusive Carlson community that empowers students to lead.",
+        statement: "Net Impact is happy to endorse Himeeka and Drew's campaign! Their commitment to uplifting the student voice and advocating for diverse identities closely aligns with Net Impact's mission on campus. We trust that they will advocate for all identities and provide meaningful support to the students and organizations that make Carlson feel like home!",
         logoUrl: "/assets/candidate-placeholder.png"
     },
     {
-        org: "U-Finance",
-        shortOrg: "U-Finance",
-        statement: "U-Finance is excited to endorse Himeeka and Drew and their focus on collaboration, inclusion, and better support for student organizations.",
+        org: "Delta Sigma Pi",
+        shortOrg: "Delta Sigma Pi",
+        statement: "Delta Sigma Pi is excited to endorse Himeeka and Drew for BBoard, as their campaign aligns with our pillars as an organization. Real connections, career success, and belonging resonate with the purposes of DSP, and we are excited to see these values further reflected in the greater Carlson community throughout their term. Additionally, their diverse backgrounds make them well-suited for organizing and collaborating with the wide range of groups and individuals that these positions entail.",
+        logoUrl: "/assets/candidate-placeholder.png"
+    },
+    {
+        org: "Derek Jiang, President of BAMS",
+        shortOrg: "Derek Jiang",
+        statement: "Derek Jiang, President of BAMS, is proud to personally endorse Himeeka and Drew for Carlson Student Body leadership. His support reflects a commitment to student representation, collaboration, and community at Carlson.",
         logoUrl: "/assets/candidate-placeholder.png"
     }
 ];
