@@ -1368,6 +1368,85 @@ h1, h2, h3 {
     }
 }
 
+/* ═══════════════════════════════════════════════════
+   OFFICE HOURS POPUP
+   ═══════════════════════════════════════════════════ */
+.office-hours-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--red); /* Maroon */
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    z-index: 9999;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(150%);
+    opacity: 0;
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.6s ease;
+}
+
+.office-hours-popup.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.office-hours-popup .popup-close {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.8rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    transition: color 0.2s;
+}
+
+.office-hours-popup .popup-close:hover {
+    color: var(--gold);
+}
+
+.office-hours-popup .popup-title {
+    color: var(--gold);
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.office-hours-popup .popup-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+    object-fit: cover;
+}
+
+.office-hours-popup .popup-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+}
+
+.office-hours-popup .popup-actions a.button {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 0.8rem;
+    justify-content: center;
+}
+
+.office-hours-popup .popup-btn-zoom {
+    background-color: var(--gold);
+    color: var(--text-dark);
+}
+
 .button-white-maroon { 
     background-color: var(--white); 
     color: var(--red); 
@@ -1377,3 +1456,27 @@ h1, h2, h3 {
     color: var(--red);
 }
 
+@media (max-width: 600px) {
+    .office-hours-popup {
+        width: 260px;
+        bottom: 15px;
+        right: 15px;
+        left: auto;
+        padding: 1.2rem;
+    }
+    .office-hours-popup .popup-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.6rem;
+        margin-top: 0.2rem;
+    }
+    .office-hours-popup .popup-image {
+        margin-bottom: 0.8rem;
+    }
+    .office-hours-popup .popup-actions {
+        gap: 0.6rem;
+    }
+    .office-hours-popup .popup-actions a.button {
+        padding: 0.6rem;
+        font-size: 0.85rem;
+    }
+}

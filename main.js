@@ -6,7 +6,7 @@ inject();
 
 document.documentElement.classList.add("js-enabled");
 
-/* ═══════════ SUPABASE CLIENT ═══════════ */
+/* ═══════════ SUPABASE CLIENT ══════���════ */
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
@@ -470,3 +470,34 @@ function closeEndorsementModal() {
 
 if (modalOverlay) modalOverlay.addEventListener('click', closeEndorsementModal);
 if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeEndorsementModal);
+
+/* ═══════════ OFFICE HOURS POPUP LOGIC ═══════════ */
+const officeHoursPopup = document.getElementById('office-hours-popup');
+const popupCloseBtn = document.getElementById('popup-close');
+const popupFormBtn = document.getElementById('popup-btn-form');
+
+if (officeHoursPopup) {
+    // Show popup shortly after page load
+    setTimeout(() => {
+        officeHoursPopup.classList.add('show');
+    }, 1500);
+
+    // Close logic
+    const closePopup = () => {
+        if (typeof triggerHaptic !== 'undefined') triggerHaptic("light");
+        officeHoursPopup.classList.remove('show');
+        // Wait for transition before hiding completely to prevent click issues
+        setTimeout(() => {
+            officeHoursPopup.style.display = 'none';
+        }, 600);
+    };
+
+    if (popupCloseBtn) {
+        popupCloseBtn.addEventListener('click', closePopup);
+    }
+    
+    // Close the popup when clicking the form button (it also navigates to #contact via href)
+    if (popupFormBtn) {
+        popupFormBtn.addEventListener('click', closePopup);
+    }
+}
