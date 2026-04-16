@@ -478,9 +478,9 @@ const popupFormBtn = document.getElementById('popup-btn-form');
 
 if (officeHoursPopup) {
     // Show popup shortly after page load
-    setTimeout(() => {
-        officeHoursPopup.classList.add('show');
-    }, 1500);
+    // setTimeout(() => {
+    //     officeHoursPopup.classList.add('show');
+    // }, 1500);
 
     // Close logic
     const closePopup = () => {
