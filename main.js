@@ -424,6 +424,54 @@ const endorsementsData = [
         shortOrg: "Association of Latino Professionals for America",
         statement: "The Association of Latino Professionals for America is proud to endorse Himeeka and Drew for President and Vice President in recognition of their meaningful contributions to the Carlson community. Their strong commitment to uplifting diverse student voices and expanding access to opportunities closely reflects our mission of fostering inclusion and creating pathways of opportunity. We are confident in their continued ability to make a positive and lasting impact across Carlson.",
         logoUrl: "/assets/alpfa.png"
+    },
+    {
+        org: "Undergraduate Business Law Society",
+        shortOrg: "UBLS",
+        statement: "Undergraduate Business Law Society is proud to endorse Himeeka and Drew and their commitment to strengthening student organizations and building a more connected Carlson community.",
+        logoUrl: "/assets/candidate-placeholder.png"
+    },
+    {
+        org: "Club MIS",
+        shortOrg: "Club MIS",
+        statement: "Club MIS is proud to endorse Himeeka and Drew for Carlson Student Body leadership. Their platform reflects our values around student success, collaboration, and community.",
+        logoUrl: "/assets/candidate-placeholder.png"
+    },
+    {
+        org: "Business Association of Multicultural Students",
+        shortOrg: "BAM",
+        statement: "Business Association of Multicultural Students is excited to endorse Himeeka and Drew because their vision for Carlson centers inclusion, community, and stronger support for student organizations.",
+        logoUrl: "/assets/candidate-placeholder.png"
+    },
+    {
+        org: "180 Degrees Consulting",
+        shortOrg: "180 Degrees Consulting",
+        statement: "180 Degrees Consulting is proud to support Himeeka and Drew and their commitment to meaningful student impact, collaboration, and community-building at Carlson.",
+        logoUrl: "/assets/candidate-placeholder.png"
+    },
+    {
+        org: "Asians in Management",
+        shortOrg: "AIM",
+        statement: "Asians in Management is happy to endorse Himeeka and Drew and appreciates their focus on supporting student organizations and creating a stronger Carlson community.",
+        logoUrl: "/assets/candidate-placeholder.png"
+    },
+    {
+        org: "Student Accounting and Finance Association",
+        shortOrg: "SAFA",
+        statement: "Student Accounting and Finance Association is proud to endorse Himeeka and Drew. Their platform aligns with our commitment to transparency, student support, and a stronger Carlson community.",
+        logoUrl: "/assets/candidate-placeholder.png"
+    },
+    {
+        org: "Net Impact",
+        shortOrg: "Net Impact",
+        statement: "Net Impact is proud to support Himeeka and Drew and their vision for a more inclusive Carlson community that empowers students to lead.",
+        logoUrl: "/assets/candidate-placeholder.png"
+    },
+    {
+        org: "U-Finance",
+        shortOrg: "U-Finance",
+        statement: "U-Finance is excited to endorse Himeeka and Drew and their focus on collaboration, inclusion, and better support for student organizations.",
+        logoUrl: "/assets/candidate-placeholder.png"
     }
 ];
 
