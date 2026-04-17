@@ -397,31 +397,31 @@ const endorsementsData = [
     {
         org: "WOCBA",
         shortOrg: "WOCBA",
-        logoUrl: "/assets/images/wocba.png",
+        logoUrl: "/assets/images/wocba.svg",
         statement: "As the Women of Color in Business Association, we are proud to support Himeeka and Drew for Carlson Student Body Leadership. Their values closely align with our mission of uplifting diverse voices and fostering an inclusive, empowering community. Over the years, we’ve seen their genuine commitment to the Carlson community and their dedication to creating meaningful change. We are confident they deeply care about this community and will work to ensure it continues to grow and be the best it can be!"
     },
     {
         org: "BEAM",
         shortOrg: "BEAM",
-        logoUrl: "/assets/images/beam.png",
+        logoUrl: "/assets/images/beam.svg",
         statement: "BEAM is proud to endorse Himeeka and Drew’s campaign for President and Vice President of the Carlson student body. We support their vision of a Carlson that uplifts all students and builds a stronger community within it. As a student organization, we look forward to seeing how Himeeka and Drew will improve upon supporting Carlson student organizations and their efforts to connect students with peers, business professionals, and career opportunities. Through their various backgrounds and lived experiences, we trust that they will use the knowledge they have learned and implement it to make meaningful change that will leave a positive impact on the Carlson community."
     },
     {
         org: "MBA",
         shortOrg: "MBA",
-        logoUrl: "/assets/images/mba.png",
+        logoUrl: "/assets/images/mba.svg",
         statement: "We are proud to endorse Himeeka Sunbeeb and Drew Scheid for Carlson Student Body President. Their commitment to uplifting students, strengthening collaboration with student organizations, and building a more inclusive and connected Carlson community strongly aligns with our values at the Muslim Business Administration!"
     },
     {
         org: "GBN",
         shortOrg: "GBN",
-        logoUrl: "/assets/images/gbn.jpg",
+        logoUrl: "/assets/images/gbn.svg",
         statement: "We are proud to endorse Himeeka and Drew as President and Vice President! Their platform directly shares the values of Global Business Nexus. This shared vision ensures that as we navigate an interconnected world, every student will be provided with a community and resources needed to thrive both on campus and in their future careers."
     },
     {
         org: "ALPFA",
         shortOrg: "ALPFA",
-        logoUrl: "/assets/images/alpfa.png",
+        logoUrl: "/assets/images/alpfa.svg",
         statement: "The Association of Latino Professionals for America is proud to endorse Himeeka and Drew for President and Vice President in recognition of their meaningful contributions to the Carlson community. Their strong commitment to uplifting diverse student voices and expanding access to opportunities closely reflects our mission of fostering inclusion and creating pathways of opportunity. We are confident in their continued ability to make a positive and lasting impact across Carlson."
     },
     {
