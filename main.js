@@ -469,6 +469,11 @@ const endorsementsData = [
         org: "Derek Jiang",
         shortOrg: "Derek Jiang",
         statement: "I am supporting Sunbeeb and Scheid because every student deserves to feel like they belong. Their campaign clearly outlines actionable steps that ensure real connection between students"
+    },
+    {
+        org: "National Association of Black Accountants",
+        shortOrg: "NABA",
+        statement: "The National Association of Black Accountants at the University of Minnesota formally endorses Himeeka and Drew for President and Vice President of Carlson’s Business Board. Having both served as VP of DEI, they have demonstrated an unwavering commitment to advancing social equity and actionable inclusion on our campus. We are confident their proven leadership will ensure every student has a voice and the resources to succeed."
     }
 ];
 
