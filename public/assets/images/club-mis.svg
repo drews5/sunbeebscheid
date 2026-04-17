@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title desc">
+  <title>Club MIS</title>
+  <desc>Local badge for Club MIS</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6d28d9"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" rx="120" fill="url(#g)"/>
+  <path d="M160 220h480l-90 90H70z" fill="#ffffff" opacity="0.16"/>
+  <text x="400" y="388" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="104" font-weight="800" fill="#ffffff" letter-spacing="4">CLUB MIS</text>
+  <text x="400" y="474" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#e0e7ff" letter-spacing="4">MANAGEMENT INFORMATION SYSTEMS</text>
+</svg>

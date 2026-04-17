@@ -284,7 +284,7 @@ if (joinForm) {
     });
 }
 
-/* ═══════════ CONTACT FORM HANDLER ═══════════ */
+/* ═════════���═ CONTACT FORM HANDLER ═══════════ */
 const contactForm = document.getElementById("contact-form");
 const contactSuccess = document.getElementById("contact-success");
 const contactNameInput = document.getElementById("contact-name");
@@ -427,31 +427,37 @@ const endorsementsData = [
     {
         org: "180 Degrees Consulting - UMN",
         shortOrg: "180 Degrees",
+        logoUrl: "/assets/images/180dc.svg",
         statement: "We are excited to support Himeeka Sunbeeb and Drew Scheid for Carlson Student Body President and Vice President. Their focus on strengthening the relationships between student orgs and the Business Board strongly along with our goals of supporting if our members and increasing belonging in their student experience. This collaborative nature of their platform can allow us to grow our campus community and support our members in their professional and academic careers."
     },
     {
         org: "Undergraduate Business Law Society",
         shortOrg: "UBLS",
+        logoUrl: "/assets/images/ubls.svg",
         statement: "UBLS is proud to endorse Himeeka and Drew's campaign for President and Vice President due to their commitment to fostering an inclusive, collaborative, and engaged Carlson community. Their vision aligns with our values of leadership, professional development, and creating meaningful opportunities for students to grow both inside and outside the classroom. We are confident in their dedication to strengthening the student experience and supporting the Carlson community as a whole."
     },
     {
         org: "Club MIS",
         shortOrg: "Club MIS",
+        logoUrl: "/assets/images/club-mis.svg",
         statement: "As a club that helps connect students to different local companies, we are glad this campaign is supporting career success!"
     },
     {
         org: "Asians In Management",
         shortOrg: "AIM",
+        logoUrl: "/assets/images/aim.svg",
         statement: "Our Board likes your mission! and we support your journey!"
     },
     {
         org: "Student Accounting Finance Association (SAFA)",
         shortOrg: "SAFA",
+        logoUrl: "/assets/images/safa.svg",
         statement: "We would like to endorse Himeeka and Drew because our club believes in their vision to uplift students and drive career advancement!"
     },
     {
         org: "Net Impact",
         shortOrg: "Net Impact",
+        logoUrl: "/assets/images/net-impact.svg",
         statement: "Net Impact is happy to endorse Himeeka and Drew's campaign! Their commitment to uplifting the student voice and advocating for diverse identities closely aligns with Net Impact's mission on campus. We trust that they will advocate for all identities and provide meaningful support to the students and organizations that make Carlson feel like home!"
     },
     {
@@ -462,16 +468,19 @@ const endorsementsData = [
     {
         org: "Izaan Rana",
         shortOrg: "Izaan Rana",
+        logoUrl: "/assets/images/izaan-rana.svg",
         statement: "I endorse Himeeka and Drew because I believe they represent Carlson students passionately and are capable of bringing real change to this campus through representation and connection."
     },
     {
         org: "Fatima Aden",
         shortOrg: "Fatima Aden",
+        logoUrl: "/assets/images/fatima-aden.svg",
         statement: "I am proud to support Himeeka Sunbeeb and Drew Scheid in their run for Carlson Student Body President. As a team deeply involved in Carlson student life, they understand firsthand the changes students want to see on campus. Through my own personal experiences, I know how much dedication, listening, and genuine commitment it takes to represent students well--Himeeka and Drew embody those qualities, and I am confident they will lead with intention, advocacy, and a strong connection to the students they serve!"
     },
     {
         org: "Derek Jiang",
         shortOrg: "Derek Jiang",
+        logoUrl: "/assets/images/derek-jiang.svg",
         statement: "I am supporting Sunbeeb and Scheid because every student deserves to feel like they belong. Their campaign clearly outlines actionable steps that ensure real connection between students"
     }
 ];
