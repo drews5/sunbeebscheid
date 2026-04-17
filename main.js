@@ -393,31 +393,35 @@ if (cdElement && cdBannerTxt) {
 }
 
 /* ═══════════ ENDORSEMENTS LOGIC ═══════════ */
-// Easy to update block! Format: { org: "Name", shortOrg: "Pill Name", statement: "Full Quote", logoUrl: "Drive link or direct image link" }
 const endorsementsData = [
     {
         org: "WOCBA",
         shortOrg: "WOCBA",
+        logoUrl: "/assets/images/wocba.png",
         statement: "As the Women of Color in Business Association, we are proud to support Himeeka and Drew for Carlson Student Body Leadership. Their values closely align with our mission of uplifting diverse voices and fostering an inclusive, empowering community. Over the years, we’ve seen their genuine commitment to the Carlson community and their dedication to creating meaningful change. We are confident they deeply care about this community and will work to ensure it continues to grow and be the best it can be!"
     },
     {
         org: "BEAM",
         shortOrg: "BEAM",
+        logoUrl: "/assets/images/beam.png",
         statement: "BEAM is proud to endorse Himeeka and Drew’s campaign for President and Vice President of the Carlson student body. We support their vision of a Carlson that uplifts all students and builds a stronger community within it. As a student organization, we look forward to seeing how Himeeka and Drew will improve upon supporting Carlson student organizations and their efforts to connect students with peers, business professionals, and career opportunities. Through their various backgrounds and lived experiences, we trust that they will use the knowledge they have learned and implement it to make meaningful change that will leave a positive impact on the Carlson community."
     },
     {
         org: "MBA",
         shortOrg: "MBA",
+        logoUrl: "/assets/images/mba.png",
         statement: "We are proud to endorse Himeeka Sunbeeb and Drew Scheid for Carlson Student Body President. Their commitment to uplifting students, strengthening collaboration with student organizations, and building a more inclusive and connected Carlson community strongly aligns with our values at the Muslim Business Administration!"
     },
     {
         org: "GBN",
         shortOrg: "GBN",
+        logoUrl: "/assets/images/gbn.jpg",
         statement: "We are proud to endorse Himeeka and Drew as President and Vice President! Their platform directly shares the values of Global Business Nexus. This shared vision ensures that as we navigate an interconnected world, every student will be provided with a community and resources needed to thrive both on campus and in their future careers."
     },
     {
         org: "ALPFA",
         shortOrg: "ALPFA",
+        logoUrl: "/assets/images/alpfa.png",
         statement: "The Association of Latino Professionals for America is proud to endorse Himeeka and Drew for President and Vice President in recognition of their meaningful contributions to the Carlson community. Their strong commitment to uplifting diverse student voices and expanding access to opportunities closely reflects our mission of fostering inclusion and creating pathways of opportunity. We are confident in their continued ability to make a positive and lasting impact across Carlson."
     },
     {
@@ -479,30 +483,37 @@ const modalCloseBtn = document.getElementById("modal-close");
 const modalOrgName = document.getElementById("modal-org-name");
 const modalStatement = document.getElementById("modal-statement");
 const modalLogo = document.getElementById("modal-logo");
+const modalLogoWrap = modalLogo ? modalLogo.parentElement : null;
 
-if (modalLogo) {
-    modalLogo.style.display = "none";
-}
+const renderLogoMarkup = (endorser) => {
+    if (endorser.logoUrl) {
+        return '<img src="' + endorser.logoUrl + '" alt="' + endorser.org + ' logo" class="endorsement-logo" loading="lazy">';
+    }
+    return '<span class="endorsement-fallback">' + endorser.shortOrg + '</span>';
+};
 
 if (endorsementsGrid) {
     endorsementsData.forEach((endorser, idx) => {
         const card = document.createElement("div");
         card.className = "endorsement-card";
-        card.style.transitionDelay = `${idx * 0.1}s`;
+        card.style.transitionDelay = (idx * 0.1) + 's';
         
-        card.innerHTML = `
-            <div class="endorsement-pill">
-                <span>${endorser.shortOrg}</span>
-            </div>
-        `;
+        card.innerHTML = '\n            <div class="endorsement-mark">\n                ' + renderLogoMarkup(endorser) + '\n            </div>\n            <div class="endorsement-pill">\n                <span>' + endorser.shortOrg + '</span>\n            </div>\n        ';
         
         card.addEventListener("click", () => {
             if (typeof triggerHaptic !== "undefined") triggerHaptic("light");
             modalOrgName.innerText = endorser.org;
             modalStatement.innerText = endorser.statement;
-            if (modalLogo) {
-                modalLogo.src = "";
-                modalLogo.style.display = "none";
+            if (modalLogo && modalLogoWrap) {
+                if (endorser.logoUrl) {
+                    modalLogo.src = endorser.logoUrl;
+                    modalLogo.alt = endorser.org + ' logo';
+                    modalLogoWrap.style.display = "flex";
+                } else {
+                    modalLogo.src = "";
+                    modalLogo.alt = "";
+                    modalLogoWrap.style.display = "none";
+                }
             }
             endorsementModal.classList.add("is-active");
         });
@@ -510,6 +521,7 @@ if (endorsementsGrid) {
         endorsementsGrid.appendChild(card);
     });
 }
+
 
 function closeEndorsementModal() {
     if (endorsementModal) {
