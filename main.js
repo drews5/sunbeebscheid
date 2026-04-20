@@ -566,8 +566,8 @@ if (redirectPopup) {
         redirectPopup.classList.add('show');
         
         redirectTimeout = setTimeout(() => {
-            window.location.href = "https://vote.umn.edu";
-        }, 5000);
+            window.location.href = "https://vote.umn.edu/auth.php";
+        }, 3000);
 
     }, 500); // Short delay to feel natural after page loads
 

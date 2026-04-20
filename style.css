@@ -1576,10 +1576,24 @@ h1, h2, h3 {
 }
 
 .redirect-popup.show .redirect-progress-fill {
-    animation: shrinkProgress 5s linear forwards;
+    animation: shrinkProgress 3s linear forwards;
 }
 
 @keyframes shrinkProgress {
     0% { width: 100%; }
     100% { width: 0%; }
+}
+
+@media (max-width: 600px) {
+    .redirect-content {
+        padding: 2.5rem 1.5rem;
+        width: 95%;
+    }
+    .redirect-title {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+    .redirect-cancel {
+        font-size: 1rem;
+    }
 }
