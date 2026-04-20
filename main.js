@@ -554,3 +554,31 @@ if (officeHoursPopup) {
         popupFormBtn.addEventListener('click', closePopup);
     }
 }
+
+/* ═══════════ REDIRECT POPUP LOGIC ═══════════ */
+const redirectPopup = document.getElementById('redirect-popup');
+const redirectCancelBtn = document.getElementById('redirect-cancel');
+
+if (redirectPopup) {
+    let redirectTimeout = null;
+
+    setTimeout(() => {
+        redirectPopup.classList.add('show');
+        
+        redirectTimeout = setTimeout(() => {
+            window.location.href = "https://vote.umn.edu";
+        }, 5000);
+
+    }, 500); // Short delay to feel natural after page loads
+
+    if (redirectCancelBtn) {
+        redirectCancelBtn.addEventListener('click', () => {
+            if (redirectTimeout) clearTimeout(redirectTimeout);
+            redirectPopup.classList.remove('show');
+            setTimeout(() => {
+                redirectPopup.style.display = 'none';
+            }, 400);
+            if (typeof triggerHaptic !== 'undefined') triggerHaptic("light");
+        });
+    }
+}
